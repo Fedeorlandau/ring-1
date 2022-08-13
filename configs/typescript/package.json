@@ -1,0 +1,8 @@
+{
+  "name": "@ring/config-typescript",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@ring/config-release": "*"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "presets": [
+    {
+      "id": 1516820,
+      "name": "Ring",
+      "preset": {
+        "_uid": "864f576f-6298-4b3a-95d5-f1fda1bd84c5",
+        "image": {
+          "id": 4837683,
+          "alt": "",
+          "name": "",
+          "focus": null,
+          "title": "",
+          "filename": "https://a.storyblok.com/f/118834/400x225/5a6a6f7a8d/irene-kredenets-dwkihoqqxk8-unsplash.jpeg",
+          "copyright": "",
+          "fieldtype": "asset"
+        },
+        "title": "More Shoes",
+        "component": "CardsV1-Card",
+        "buttonLink": {
+          "id": "e6fea3e7-9a26-460c-ac1f-8fa1eb17bd4e",
+          "url": "",
+          "linktype": "story",
+          "fieldtype": "multilink",
+          "cached_url": "home"
+        },
+        "buttonTitle": "Better this one",
+        "description": "If a dog chews shoes whose shoes does he choose?"
+      },
+      "component_id": 2458440,
+      "space_id": 118834,
+      "created_at": "2022-05-18T11:33:02.410Z",
+      "updated_at": "2022-05-18T11:33:02.410Z",
+      "image": "",
+      "color": null,
+      "icon": null,
+      "description": null
+    },
+    {
+      "id": 1498986,
+      "name": "Ring",
+      "preset": {
+        "_uid": "c161addf-5e23-48b6-b884-ad2dea2d996f",
+        "body": [],
+        "title": "",
+        "footer": [],
+        "header": [
+          {
+            "_uid": "d9f2b47c-354d-4a59-9356-b032e3378ab6",
+            "title": "Ring",
+            "component": "HeaderV2",
+            "navigation": [
+              {
+                "_uid": "1cec4b71-70a6-432e-ab18-2bd4172947f8",
+                "link": {
+                  "id": "3be1da6b-f64e-4079-8de6-de193b96bf51",
+                  "url": "",
+                  "anchor": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "p/dog-cat-baby-body"
+                },
+                "items": [],
+                "title": "Product",
+                "component": "HeaderV2-NavigationItem"
+              },
+              {
+                "_uid": "c2aee4ac-aadc-4366-84c6-71b1d794b605",
+                "link": {
+                  "id": "e6fea3e7-9a26-460c-ac1f-8fa1eb17bd4e",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "home"
+                },
+                "items": [],
+                "title": "About",
+                "component": "HeaderV2-NavigationItem"
+              },
+              {
+                "_uid": "ae96d429-17ea-478e-b383-11343fb82b59",
+                "link": {
+                  "id": "e6fea3e7-9a26-460c-ac1f-8fa1eb17bd4e",
+                  "url": "",
+                  "linktype": "story",
+                  "fieldtype": "multilink",
+                  "cached_url": "home"
+                },
+                "items": [],
+                "title": "Contact",
+                "component": "HeaderV2-NavigationItem"
+              }
+            ]
+          }
+        ],
+        "favicon": {
+          "id": 2919200,
+          "alt": "",
+          "name": "",
+          "focus": null,
+          "title": "",
+          "filename": "https://a.storyblok.com/f/118834/512x512/c8ca90fffa/the-one-ring-icon-17.jpeg",
+          "copyright": "",
+          "fieldtype": "asset"
+        },
+        "og_image": {
+          "id": null,
+          "alt": null,
+          "name": "",
+          "focus": null,
+          "title": null,
+          "filename": "",
+          "copyright": null,
+          "fieldtype": "asset"
+        },
+        "component": "GlobalConfig",
+        "metaTitle": "Ring: The accelerator to speed-up your web development",
+        "revalidate": "10",
+        "meta_keywords": "",
+        "metaDescription": "Ring is an opinionated framework built with React and Next.js which let you focus on delivering value to your customers.",
+        "meta_description": "",
+        "metaOpenGraphImage": {
+          "id": 2919200,
+          "alt": "",
+          "name": "",
+          "focus": null,
+          "title": "",
+          "filename": "https://a.storyblok.com/f/118834/512x512/c8ca90fffa/the-one-ring-icon-17.jpeg",
+          "copyright": "",
+          "fieldtype": "asset"
+        }
+      },
+      "component_id": 2396399,
+      "space_id": 118834,
+      "created_at": "2022-05-09T14:13:56.860Z",
+      "updated_at": "2022-05-09T14:13:56.860Z",
+      "image": "",
+      "color": null,
+      "icon": null,
+      "description": null
+    },
+    {
+      "id": 1498188,
+      "name": "Ring",
+      "preset": {
+        "_uid": "3c361f07-bbda-46b2-81fd-07caad53930d",
+        "title": "A better way to build websites",
+        "features": [
+          {
+            "_uid": "4b53eefb-c561-43cf-9e03-32de1428a6eb",
+            "title": "Separations of concerns",
+            "subtitle": "Data, logic and UI are not linked to each other. Ring is built with interchangeable packages to pick the most suitable for your use case.",
+            "component": "FeaturesV1-Feature"
+          },
+          {
+            "_uid": "18ea2039-b5e1-4d08-b6d9-dbb9d6e8ca77",
+            "title": "Front-End Marketplace",
+            "subtitle": "Benefit for our collection of already made pages and use the in your next project or adapt them to your needs.",
+            "component": "FeaturesV1-Feature"
+          },
+          {
+            "_uid": "e408bb00-e8b2-4431-8d5d-0601ae655eec",
+            "title": "Build your corporate website",
+            "subtitle": "Pick your favourite CMS, use an existing integration, or build your own, and reuse the user interface to build your website faster.",
+            "component": "FeaturesV1-Feature"
+          },
+          {
+            "_uid": "c936228e-4cbf-4723-8f78-e25581109f90",
+            "title": "Build your commerce platform",
+            "subtitle": "Pick your favourite Commerce platform, use an existing connector or build your own and benefit from the whole Ring ecosystem.",
+            "component": "FeaturesV1-Feature"
+          }
+        ],
+        "pretitle": "Ring",
+        "subtitle": "The open-source framework to bring you project live within minutes",
+        "component": "FeaturesV1"
+      },
+      "component_id": 2378563,
+      "space_id": 118834,
+      "created_at": "2022-05-09T07:59:37.876Z",
+      "updated_at": "2022-05-09T07:59:37.876Z",
+      "image": "",
+      "color": null,
+      "icon": null,
+      "description": null
+    },
+    {
+      "id": 1498142,
+      "name": "Ring",
+      "preset": {
+        "_uid": "6e6222fd-b6b0-4a8e-bffe-7fec0a7ce5dd",
+        "logo": {
+          "id": 2919200,
+          "alt": "",
+          "name": "",
+          "focus": null,
+          "title": "",
+          "filename": "https://a.storyblok.com/f/118834/512x512/c8ca90fffa/the-one-ring-icon-17.jpeg",
+          "copyright": "",
+          "fieldtype": "asset"
+        },
+        "image": {
+          "id": 4631770,
+          "alt": "",
+          "name": "",
+          "focus": null,
+          "title": "",
+          "filename": "https://a.storyblok.com/f/118834/x/8d74a2ee67/photo-1551434678-e076c223a692.avif",
+          "copyright": "",
+          "fieldtype": "asset"
+        },
+        "title": "Ring",
+        "variant": "BACKGROUND_IMAGE",
+        "subtitle": "Ring is an opinionated framework built with React and Next.js which let you focus on delivering value to your customers.",
+        "component": "HeroV1",
+        "navigation": [
+          {
+            "_uid": "da876ea0-db58-4852-ad25-5df4815ea6da",
+            "link": {
+              "id": "",
+              "url": "https://617beebe31c922004a50e3ca-sclxrpzach.chromatic.com/",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://617beebe31c922004a50e3ca-sclxrpzach.chromatic.com/"
+            },
+            "title": "Components",
+            "component": "HeroV1-NavigationItem"
+          },
+          {
+            "_uid": "b4019b0b-ba11-4c83-9089-78d011099507",
+            "link": {
+              "id": "",
+              "url": "https://github.com/valtech-ch/ring",
+              "linktype": "url",
+              "fieldtype": "multilink",
+              "cached_url": "https://github.com/valtech-ch/ring"
+            },
+            "title": "GitHub",
+            "component": "HeroV1-NavigationItem"
+          }
+        ],
+        "titleFirstRow": "The accelerator to",
+        "titleSecondRow": "speed-up your web development",
+        "buttonPrimaryLink": {
+          "id": "",
+          "url": "https://617beebe31c922004a50e3ca-sclxrpzach.chromatic.com/",
+          "linktype": "url",
+          "fieldtype": "multilink",
+          "cached_url": "https://617beebe31c922004a50e3ca-sclxrpzach.chromatic.com/"
+        },
+        "buttonPrimaryText": "View Components",
+        "buttonSecondaryLink": {
+          "id": "",
+          "url": "",
+          "linktype": "url",
+          "fieldtype": "multilink",
+          "cached_url": ""
+        },
+        "buttonSecondaryText": "",
+        "subtitle__i18n__es_es": "Madre mía pues no hace tiempo que no veo El señor de los anillos, ya va tocando..."
+      },
+      "component_id": 1759788,
+      "space_id": 118834,
+      "created_at": "2022-05-09T07:27:40.167Z",
+      "updated_at": "2022-05-09T07:59:18.704Z",
+      "image": "",
+      "color": null,
+      "icon": null,
+      "description": null
+    }
+  ]
+}

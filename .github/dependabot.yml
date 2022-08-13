@@ -1,0 +1,77 @@
+version: 2
+updates:
+  # root
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  # apps
+  - package-ecosystem: 'npm'
+    directory: '/apps/blog'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  - package-ecosystem: 'npm'
+    directory: '/apps/storefront'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  # configs
+  - package-ecosystem: 'npm'
+    directory: '/configs/eslint'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  # libs
+  - package-ecosystem: 'npm'
+    directory: '/libs/cms/contentful'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  # - package-ecosystem: 'npm'
+  #   directory: '/libs/cms/storyblok'
+  #   schedule:
+  #     interval: 'daily'
+  #   open-pull-requests-limit: 1
+  #   ignore:
+  #     - dependency-name: '@ring/*'
+
+  - package-ecosystem: 'npm'
+    directory: '/libs/commerce/swell'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  - package-ecosystem: 'npm'
+    directory: '/libs/ui'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  - package-ecosystem: 'npm'
+    directory: '/libs/ui-tokens'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'

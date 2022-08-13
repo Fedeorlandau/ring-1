@@ -1,0 +1,50 @@
+---
+title: Dev Environment
+dateCreated: 'February 06, 2022'
+dateLastReview: 'February 06, 2022'
+description: Setting up the deployments to Vercel
+tags: ['deployments', 'vercel']
+authors: ['Lorenzo García Moreno']
+reviewers: []
+---
+
+# Deployments
+
+Deployments are handled by GitHub Actions. Currently (2022.04) the deployment to production is configured at [deploy.yml](./.github/workflows/deploy.yml).
+
+Requirements:
+
+1. Create a project in Vercel (through the UI or the CLI)
+2. Define Vercel secrets in GitHub
+
+## Create a project in Vercel with the CLI
+
+[Docs for the CLI](https://vercel.com/docs/cli)
+
+Run Vercel:
+
+    npx vercel
+
+Follow the default instructions or what makes sense for your case. Keep an eye on those two settings, because Ring is a monorepo:
+
+Define where the next app is located in the apps folder:
+
+    In which directory is your code located? ./apps/next-storyblok-tailwind
+
+Define the custom build script for turborepo:
+
+    cd ../.. && npx turbo run build --scope=next-storyblok-tailwind --include-dependencies --no-deps
+
+Finally, a `./vercel` folder is created.
+
+## Define Vercel secrets in GitHub
+
+The Vercel secrets need to be added to the secrects in your GitHub repository. Those are the required secrets:
+
+- VERCEL_TOKEN
+- VERCEL_ORG_ID
+- VERCEL_PROJECT_ID
+
+The `VERCEL_ORG_ID` and the `VERCEL_PROJECT_ID` can be found in the `./vercel/project.json` file created in the previous step.
+
+The `VERCEL_TOKEN` needs to be created in the [Vercel UI](https://vercel.com/account/tokens).

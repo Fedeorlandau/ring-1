@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@ring/config-typescript/next.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "incremental": true,
+    "paths": {
+      "src/*": ["src/*"],
+      "@ring/cms": ["../../libs/cms/contentful"],
+      "@ring/cms/*": ["../../libs/cms/contentful/*"],
+      "@ring/commerce": ["../../libs/commerce/swell"],
+      "@ring/commerce/*": ["../../libs/commerce/swell/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", ".turbo", ".next", "coverage"]
+}

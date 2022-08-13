@@ -1,0 +1,33 @@
+{
+  "name": "Ring",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "vscode": "true"
+    }
+  },
+
+  // a port or array of ports that should be made available locally when the container is running
+  "appPort": 8888,
+
+  // an array of extension IDs that specify the extensions that should be installed inside the container when it is created
+  "extensions": [
+    "wesbos.theme-cobalt2",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
+  ],
+
+  // adds default settings.json values into a container/machine-specific settings file
+  "settings": {
+    // set VScode color theme to show that it's a container
+    "workbench.colorTheme": "Cobalt2",
+    // use zsh as default terminal
+    "terminal.integrated.shell.linux": "/bin/zsh"
+  },
+
+  "postCreateCommand": "yarn install",
+
+  // run not as root.
+  "runArgs": ["-u", "node"]
+}

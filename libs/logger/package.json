@@ -1,0 +1,41 @@
+{
+  "name": "@ring/logger",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "yarn _tsup --watch",
+    "build-lib": "yarn _tsup --minify",
+    "_tsup": "tsup src/index.ts --format esm,cjs --dts",
+    "lint": "run-p _lint:*",
+    "_lint:eslint": "TIMING=1 eslint src --format stylish --max-warnings=0",
+    "_lint:tsc": "tsc --noEmit",
+    "clean": "run-p _clean:*",
+    "_clean:dist": "shx rm -rf ./dist",
+    "_clean:node_modules": "shx rm -rf ./node_modules",
+    "_clean:turbo": "shx rm -rf ./.turbo"
+  },
+  "dependencies": {
+    "pino": "8.4.0",
+    "pino-pretty": "8.1.0"
+  },
+  "devDependencies": {
+    "@ring/config-eslint": "*",
+    "@ring/config-release": "*",
+    "@ring/config-typescript": "*",
+    "@swc/core": "1.2.224",
+    "cross-env": "7.0.3",
+    "eslint": "8.21.0",
+    "npm-run-all": "4.1.5",
+    "semantic-release": "19.0.3",
+    "semantic-release-monorepo": "7.0.5",
+    "tsup": "6.2.1",
+    "typescript": "4.7.4"
+  }
+}

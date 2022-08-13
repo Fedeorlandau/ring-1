@@ -1,0 +1,13 @@
+{
+  "extends": "@ring/config-typescript/node.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./src/*"],
+      "@ring/commerce": ["../../commerce/swell"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["dist", ".turbo", "coverage", "node_modules"]
+}

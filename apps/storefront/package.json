@@ -1,0 +1,52 @@
+{
+  "name": "@ring/storefront",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "lint": "run-p _lint:*",
+    "_lint:eslint": "TIMING=1 eslint src --format stylish --max-warnings=0",
+    "_lint:tsc": "tsc --noEmit",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "shx cp -u .env.example .env",
+    "clean": "run-p _clean:*",
+    "_clean:next": "shx rm -rf ./.next",
+    "_clean:node_modules": "shx rm -rf ./node_modules",
+    "_clean:turbo": "shx rm -rf ./.turbo"
+  },
+  "dependencies": {
+    "@ring/contentful": "*",
+    "@ring/swell": "*",
+    "@ring/ui": "*",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@ring/config-eslint": "*",
+    "@ring/config-jest": "*",
+    "@ring/config-release": "*",
+    "@ring/config-typescript": "*",
+    "@swc/core": "1.2.224",
+    "@swc/jest": "0.2.22",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "13.3.0",
+    "@types/node": "18.7.1",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "10.4.8",
+    "eslint": "8.21.0",
+    "jest": "28.1.3",
+    "jest-environment-jsdom": "28.1.3",
+    "msw": "0.44.2",
+    "next-transpile-modules": "9.0.0",
+    "postcss": "8.4.16",
+    "prettier": "2.7.1",
+    "prettier-plugin-tailwindcss": "0.1.13",
+    "tailwindcss": "3.1.8",
+    "typescript": "4.7.4"
+  }
+}

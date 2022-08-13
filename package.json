@@ -1,0 +1,59 @@
+{
+  "name": "ring",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "packageManager": "yarn@1.22.18",
+  "workspaces": [
+    "apps/**/*",
+    "configs/**/*",
+    "libs/**/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test-coverage": "turbo run test-coverage",
+    "build-lib": "turbo run build-lib",
+    "build": "turbo run build",
+    "blt": "turbo run build-lib build lint test",
+    "clean": "run-s _clean:*",
+    "_clean:workspaces": "turbo run clean --parallel",
+    "_clean:node_modules": "shx rm -rf ./node_modules",
+    "clean:git": "bash ./scripts/git.sh clean",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "🛑": "##################### ✋ TECHNICAL SCRIPTS 👇 #####################",
+    "prepare": "run-p _prepare:*",
+    "_prepare:workspaces": "turbo run prepare --parallel",
+    "_prepare:husky": "husky install",
+    "_husky-pre-commit": "lint-staged",
+    "_husky-commit-msg": "commitlint",
+    "💡 APPS": "##################### 🖖🏻 APPS ALIASES 👇 #####################",
+    "b": "yarn workspace @ring/blog",
+    "sf": "yarn workspace @ring/storefront",
+    "💡 LIBS": "##################### 🖖🏻 LIBS ALIASES 👇 #####################",
+    "cf": "yarn workspace @ring/contentful",
+    "sb": "yarn workspace @ring/cms-storyblok",
+    "sw": "yarn workspace @ring/swell",
+    "ui": "yarn workspace @ring/ui",
+    "uit": "yarn workspace @ring/ui-tokens"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
+    "@semantic-release/changelog": "6.0.1",
+    "conventional-changelog-conventionalcommits": "5.0.0",
+    "cross-env": "7.0.3",
+    "eslint": "8.21.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.7.1",
+    "shx": "0.3.4",
+    "turbo": "1.4.2"
+  }
+}

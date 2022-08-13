@@ -1,0 +1,52 @@
+name: PR Test Coverage
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-coverage:
+    permissions:
+      checks: write
+      pull-requests: write
+      contents: write
+      issues: write
+
+    strategy:
+      matrix:
+        working-directories:
+          - apps/blog
+          - apps/storefront
+          - libs/cms/contentful
+          - libs/commerce/swell
+          - libs/ui
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+
+      - run: yarn install --immutable --immutable-cache --ignore-scripts
+
+      - name: TurboRepo local server
+        uses: felixmosh/turborepo-gh-artifacts@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          server-token: ${{ secrets.TURBO_SERVER_TOKEN }}
+
+      - run: yarn turbo run build-lib --api="http://127.0.0.1:9080" --token="${{ secrets.TURBO_SERVER_TOKEN }}" --team="ring"
+
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          package-manager: yarn
+          test-script: yarn test
+          working-directory: ${{ matrix.working-directories }}

@@ -1,0 +1,12 @@
+# Ignore artifacts:
+.next
+.turbo
+.serverless
+build
+coverage
+dist
+out
+storybook-static
+
+# libs/ui-tokens
+libs/ui-tokens/src/figmaDesignTokens.json

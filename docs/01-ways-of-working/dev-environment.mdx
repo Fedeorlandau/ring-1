@@ -1,0 +1,83 @@
+---
+title: Dev Environment
+dateCreated: 'February 22, 2022'
+dateLastReview: 'February 22, 2022'
+description: Easy and quick way to spin up a portable dev invironment
+tags: ['dev-environment', 'ways-of-working']
+authors: ['Florin Senoner']
+reviewers: ['Lorenzo García Moreno']
+---
+
+# Ring Dev Environment
+
+The docker dev container lets you quickly and easily spin up a dev environment that is pre configured with all the needed tools, settings and plugins for a developer to get started right away. This way all the local there is no longer the need for a developer to pre configure his machine to get the best possible DX.
+
+To get the most out of it developers should be using VS Code as it will also provision it with the needed plugins and settings. This it not a requirement though and people can still use the IDE they feel most comfortable in using. They will just not get the full benefits and are responsible for their own DX
+
+All of this is optional and developers are not required to use the setup.
+
+[Official documentation and deep dive](https://code.visualstudio.com/docs/remote/containers)
+
+# Overview
+
+| PROS                                                                     | CONS                                                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| No more node pollution                                                   | Docker and VS Code are required                                                                   |
+| No docker registry required                                              | VS Code builds container locally Minimal performance difference may be noticeable on old machines |
+| Container installs the correct node version                              |                                                                                                   |
+| Container installs git                                                   |                                                                                                   |
+| Container installs zsh & ohmyzsh                                         |                                                                                                   |
+| Container installs relevant VS Code extensions i.e. ESLint, EditorConfig |                                                                                                   |
+| Container works identical on every OS & machine                          |                                                                                                   |
+| Portability, move your dev environment to any machine                    |                                                                                                   |
+| Easily switch projects, no need for nvm / asdf                           |                                                                                                   |
+| Testability and stability greatly increased due to singular environment  |                                                                                                   |
+
+# Installation
+
+## Docker
+
+### Mac OSX
+
+Follow the official documentation: https://docs.docker.com/desktop/mac/install/. Be aware that there are two versions now Intel CPU vs Apple Silicon
+
+### Windows
+
+Follow the official documentation: https://docs.docker.com/desktop/windows/install/
+
+## Download / Clone
+
+Download or clone this repo
+
+```bash
+git clone git@valtech-ch/ring.git
+```
+
+## VS Code
+
+Install the Remote Containers Extension, if not already installed.
+
+Once you open this repository in VS Code, it will ask you to open this in a container, do it.
+
+The docker container will take a while to build. Once completed you will find yourself in a VS Code docker container, with a zsh terminal. Note how this container is using the Cobalt2 VS Code color theme (just for demonstration purposes), feel free to change in devcontainer.json. You should see something like this, note how you are on a linux system.
+
+### Docker build caching
+
+By default, docker is caching every step to speed up rebuilds. However this may prevent you from getting latest npm packages installed during the build. Therefore VS Code also allows you to: Rebuild Without Cache and Reopen in Container
+
+## Other IDEs
+
+You need VSCode only to build the dev container. Once it's built you can connect to the container with any terminal or open the source folder with another IDE. It's just a docker container after all.
+
+```bash
+docker ps
+docker attach ID
+```
+
+## Add dev containers to an existing project / repository
+
+The dev container can very easily be added in a couple of steps to any existing project, without causing any side effects or negatively impact the user's workflow, as it's purely optional.
+
+1. Copy the [.devcontainer](../master/.devcontainer/) folder to your _project\_\_root_/.devcontainer
+2. (optional) Change your container name in [.devcontainer/devcontainer.json](../master/.devcontainer/devcontainer.json)
+3. Open your project in VScode and build your container

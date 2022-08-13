@@ -1,0 +1,43 @@
+{
+  "name": "@ring/ui-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "prebuild-lib": "yarn _create-tokens",
+    "build-lib": "yarn _tsup --minify",
+    "predev-lib": "yarn _create-tokens",
+    "dev": "yarn _tsup --watch",
+    "_create-tokens": "node -r @swc-node/register ./src/createTokens.ts",
+    "_tsup": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "lint": "run-p _lint:*",
+    "_lint:eslint": "TIMING=1 eslint src --format stylish --max-warnings=0",
+    "_lint:tsc": "tsc --noEmit",
+    "clean": "run-p _clean:*",
+    "_clean:dist": "shx rm -rf ./dist",
+    "_clean:node_modules": "shx rm -rf ./node_modules",
+    "_clean:turbo": "shx rm -rf ./.turbo"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@ring/config-eslint": "*",
+    "@ring/config-jest": "*",
+    "@ring/config-release": "*",
+    "@ring/config-typescript": "*",
+    "@ring/logger": "*",
+    "@swc-node/register": "1.5.1",
+    "@types/lodash.get": "4.4.7",
+    "eslint": "8.21.0",
+    "lodash.get": "4.4.2",
+    "tsup": "6.2.1",
+    "typescript": "4.7.4",
+    "zod": "3.18.0"
+  }
+}

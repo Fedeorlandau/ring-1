@@ -1,4 +1,4 @@
-name: Apps Storefront Deploy Preview
+name: 00 Apps - Storefront
 env:
   VERCEL_ORG_ID: ${{ secrets.RING_STOREFRONT_VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.RING_STOREFRONT_VERCEL_PROJECT_ID }}
@@ -12,7 +12,7 @@ on:
       - libs/ui/**
       - libs/ui-tokens/**
 jobs:
-  Deploy-Preview:
+  deploy-preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

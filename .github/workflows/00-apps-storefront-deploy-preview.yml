@@ -1,4 +1,4 @@
-name: 00 Apps - Storefront
+name: _Apps - Storefront
 env:
   VERCEL_ORG_ID: ${{ secrets.RING_STOREFRONT_VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.RING_STOREFRONT_VERCEL_PROJECT_ID }}
@@ -7,7 +7,7 @@ on:
     paths:
       - apps/storefront/**
       - libs/cms/contentful/**
-      - libs/commerce/sell/**
+      - libs/commerce/swell/**
       - libs/logger/**
       - libs/ui/**
       - libs/ui-tokens/**

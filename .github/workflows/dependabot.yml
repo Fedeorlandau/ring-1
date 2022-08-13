@@ -1,33 +1,33 @@
-name: Dependabot
+# name: Dependabot
 
-on:
-  pull_request:
+# on:
+#   pull_request:
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
 
-jobs:
-  auto-approve:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - uses: hmarr/auto-approve-action@v2
-        if: github.actor == 'dependabot[bot]'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#   auto-approve:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       pull-requests: write
+#     steps:
+#       - uses: hmarr/auto-approve-action@v2
+#         if: github.actor == 'dependabot[bot]'
+#         with:
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  auto-merge:
-    runs-on: ubuntu-latest
-    permissions:
-      checks: write
-      pull-requests: write
-      contents: write
-      issues: write
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
-        with:
-          target: major
-          github-token: ${{ secrets.BOT_TOKEN }}
+#   auto-merge:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       checks: write
+#       pull-requests: write
+#       contents: write
+#       issues: write
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: ahmadnassri/action-dependabot-auto-merge@v2
+#         with:
+#           target: major
+#           github-token: ${{ secrets.BOT_TOKEN }}

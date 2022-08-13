@@ -2,6 +2,10 @@ version: 2
 updates:
   # root
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/'
     schedule:
       interval: 'daily'
@@ -11,6 +15,10 @@ updates:
 
   # apps
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/apps/blog'
     schedule:
       interval: 'daily'
@@ -19,6 +27,10 @@ updates:
       - dependency-name: '@ring/*'
 
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/apps/storefront'
     schedule:
       interval: 'daily'
@@ -28,6 +40,10 @@ updates:
 
   # configs
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/configs/eslint'
     schedule:
       interval: 'daily'
@@ -37,6 +53,10 @@ updates:
 
   # libs
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/libs/cms/contentful'
     schedule:
       interval: 'daily'
@@ -53,6 +73,10 @@ updates:
   #     - dependency-name: '@ring/*'
 
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/libs/commerce/swell'
     schedule:
       interval: 'daily'
@@ -61,6 +85,10 @@ updates:
       - dependency-name: '@ring/*'
 
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/libs/ui'
     schedule:
       interval: 'daily'
@@ -69,6 +97,10 @@ updates:
       - dependency-name: '@ring/*'
 
   - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/libs/ui-tokens'
     schedule:
       interval: 'daily'

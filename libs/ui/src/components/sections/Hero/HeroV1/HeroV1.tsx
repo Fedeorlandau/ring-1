@@ -1,8 +1,8 @@
 import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 import { Button } from 'src/components/elements/Button';
 import { Heading } from 'src/components/elements/Heading';
+import { Icon } from 'src/components/elements/Icon';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
 import { Paragraph } from 'src/components/elements/Paragraph';
@@ -67,7 +67,7 @@ export function HeroV1({
                     <div className="-mr-2 flex items-center md:hidden">
                       <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Open main menu</span>
-                        <MenuIcon aria-hidden="true" className="h-6 w-6" />
+                        <Icon name="MenuIcon" />
                       </Popover.Button>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ export function HeroV1({
                     <div className="-mr-2">
                       <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Close main menu</span>
-                        <XIcon aria-hidden="true" className="h-6 w-6" />
+                        <Icon name="XIcon" />
                       </Popover.Button>
                     </div>
                   </div>

@@ -1,10 +1,14 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@testing-library/jest-dom';
 
+// @ts-expect-error we don't need types for "jest-next-dynamic"
+import preloadAll from 'jest-next-dynamic';
 import { server } from 'src/mocks/server';
 
-// Establish API mocking before all tests.
-beforeAll(() => {
+beforeAll(async () => {
+  await preloadAll();
+
+  // Establish API mocking before all tests.
   server.listen();
 });
 

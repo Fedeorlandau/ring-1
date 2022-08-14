@@ -10,21 +10,25 @@ export const featuresV1Mock: FeaturesV1Props = {
       title: 'Competitive exchange rates',
       subtitle:
         '1 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      icon: 'AcademicCapIcon',
     },
     {
       title: 'No hidden fees',
       subtitle:
         '2 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      icon: 'AdjustmentsIcon',
     },
     {
       title: 'Transfers are instant',
       subtitle:
         '3 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      icon: 'AnnotationIcon',
     },
     {
       title: 'Mobile notifications',
       subtitle:
         '4 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      icon: 'ArchiveIcon',
     },
   ],
 };

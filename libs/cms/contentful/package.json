@@ -22,7 +22,10 @@
     "_clean:dist": "shx rm -rf ./dist",
     "_clean:node_modules": "shx rm -rf ./node_modules",
     "_clean:turbo": "shx rm -rf ./.turbo",
-    "types": "node ./scripts/generate-contentful-types.js"
+    "cf:types": "node ./scripts/contentful-types.js",
+    "cf:login": "node ./scripts/contentful-login.js",
+    "cf:export": "contentful space export --content-file contentful.config.json --skip-content --skip-roles --skip-webhooks",
+    "cf:import": "contentful space import --content-file contentful.config.json --skip-content --skip-roles --skip-webhooks"
   },
   "dependencies": {
     "@ring/logger": "*",
@@ -37,6 +40,7 @@
     "@swc/core": "1.2.228",
     "@swc/jest": "0.2.22",
     "cf-content-types-generator": "2.2.2",
+    "contentful-cli": "1.14.29",
     "cross-env": "7.0.3",
     "eslint": "8.21.0",
     "jest": "28.1.3",

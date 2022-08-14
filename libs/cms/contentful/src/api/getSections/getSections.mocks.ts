@@ -78,6 +78,7 @@ export const getSectionsExpectedResult: CMSSections = [
           subtitle:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
           title: 'Competitive exchange rates',
+          icon: 'AcademicCapIcon',
         },
       ],
       pretitle: 'Transactions',

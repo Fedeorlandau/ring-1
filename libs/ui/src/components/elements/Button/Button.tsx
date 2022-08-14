@@ -1,20 +1,21 @@
-import type { FunctionComponent, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import { useTheme } from 'src/foundation/theme';
 import { cn } from 'src/utils';
+
+import type { IconProps } from '../Icon';
+import { Icon } from '../Icon';
 
 export type ButtonProps = {
   children: ReactNode;
   href: string;
   // IconStart?: FunctionComponent<{ className: string }>;
-  IconEnd?: FunctionComponent<{ className: string }>;
+  iconEnd?: IconProps;
   variant: 'primary' | 'secondary';
 };
 
-export function Button({ children, href, /* IconStart, */ IconEnd, variant }: ButtonProps) {
+export function Button({ children, href, /* IconStart, */ iconEnd, variant }: ButtonProps) {
   const theme = useTheme();
-
-  const iconClassName = cn('h-5 w-5');
 
   return (
     <a
@@ -28,7 +29,7 @@ export function Button({ children, href, /* IconStart, */ IconEnd, variant }: Bu
     >
       {/* {IconStart && <IconStart className={iconClassName} />} */}
       {children}
-      {IconEnd && <IconEnd className={iconClassName} />}
+      {iconEnd && <Icon color={iconEnd.color} name={iconEnd.name} size={iconEnd.size} variant={iconEnd.variant} />}
     </a>
   );
 }

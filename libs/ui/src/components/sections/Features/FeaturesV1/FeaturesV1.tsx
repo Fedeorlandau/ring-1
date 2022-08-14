@@ -1,9 +1,8 @@
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline';
 import React from 'react';
 import { Heading } from 'src/components/elements/Heading';
+import type { Icons } from 'src/components/elements/Icon';
+import { Icon } from 'src/components/elements/Icon';
 import { Paragraph } from 'src/components/elements/Paragraph';
-
-const icons = [GlobeAltIcon, ScaleIcon, LightningBoltIcon, AnnotationIcon];
 
 export type FeaturesV1Section = {
   id: string;
@@ -12,17 +11,13 @@ export type FeaturesV1Section = {
 };
 
 export type FeaturesV1Props = {
-  features: Array<{ title: string; subtitle: string }>;
+  features: Array<{ title: string; subtitle: string; icon: Icons }>;
   title: string;
   pretitle: string;
   subtitle: string;
 };
 
 export function FeaturesV1({ title, pretitle, subtitle, features }: FeaturesV1Props) {
-  const featuresWithIcon = features.map((feature, index) => {
-    return { ...feature, icon: icons[index] };
-  });
-
   return (
     <div className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -42,11 +37,11 @@ export function FeaturesV1({ title, pretitle, subtitle, features }: FeaturesV1Pr
 
         <div className="mt-10">
           <dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
-            {featuresWithIcon.map((feature) => (
+            {features.map((feature) => (
               <div key={feature.title} className="relative">
                 <dt aria-label={feature.title}>
                   <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
-                    <feature.icon aria-hidden="true" className="h-6 w-6" />
+                    <Icon name={feature.icon} />
                   </div>
                   <div className="ml-16">
                     <Paragraph variant="md">{feature.title}</Paragraph>

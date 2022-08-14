@@ -36,6 +36,23 @@ export const featuresV1Mock: TypeFeaturesV1 = {
           title: 'Competitive exchange rates',
           subtitle:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          icon: {
+            metadata: { tags: [] },
+            sys: {
+              space: { sys: { type: 'Link', linkType: 'Space', id: '54qcnb7au56m' } },
+              id: 'bYQfNqIUumItPoIoehNwp',
+              type: 'Entry',
+              createdAt: '2022-07-27T09:44:33.664Z',
+              updatedAt: '2022-07-27T09:44:33.664Z',
+              environment: { sys: { id: 'master', type: 'Link', linkType: 'Environment' } },
+              revision: 1,
+              contentType: { sys: { type: 'Link', linkType: 'ContentType', id: 'Icon' } },
+              locale: 'en',
+            },
+            fields: {
+              name: 'AcademicCapIcon',
+            },
+          },
         },
       },
     ],

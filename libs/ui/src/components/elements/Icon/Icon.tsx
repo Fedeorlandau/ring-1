@@ -1,49 +1,44 @@
-import {
-  BookmarkAltIcon as BookmarkAltIconOutline,
-  CalendarIcon as CalendarIconOutline,
-  ChartBarIcon as ChartBarIconOutline,
-  CursorClickIcon as CursorClickIconOutline,
-  PhoneIcon as PhoneIconOutline,
-  PlayIcon as PlayIconOutline,
-  RefreshIcon as RefreshIconOutline,
-  ShieldCheckIcon as ShieldCheckIconOutline,
-  SupportIcon as SupportIconOutline,
-  ViewGridIcon as ViewGridIconOutline,
-} from '@heroicons/react/outline';
+import type * as OutlineIcons from '@heroicons/react/outline';
+import type * as SolidIcons from '@heroicons/react/solid';
+import dynamic from 'next/dynamic';
+import type { ComponentType } from 'react';
 import React from 'react';
+import { cn } from 'src/utils';
 
-const mapping = {
-  BookmarkAltIconOutline,
-  CalendarIconOutline,
-  ChartBarIconOutline,
-  CursorClickIconOutline,
-  PhoneIconOutline,
-  PlayIconOutline,
-  RefreshIconOutline,
-  ShieldCheckIconOutline,
-  SupportIconOutline,
-  ViewGridIconOutline,
-};
+export type Icons = keyof typeof SolidIcons | keyof typeof OutlineIcons;
 
 export type IconProps = {
-  className: string;
-  name:
-    | 'BookmarkAlt'
-    | 'Calendar'
-    | 'ChartBar'
-    | 'CursorClick'
-    | 'ShieldCheck'
-    | 'Play'
-    | 'Phone'
-    | 'Refresh'
-    | 'Support'
-    | 'ViewGrid';
-  type: 'Outline';
+  color?: 'light' | 'dark';
+  name: Icons;
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'outline' | 'solid';
 };
 
-export function Icon({ name, type, ...props }: IconProps) {
-  const Component = mapping[`${name}Icon${type}`];
+export function Icon({ color, name, variant = 'outline', size = 'md' }: IconProps) {
+  let Component: ComponentType<{ className: string }>;
 
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...props} />;
+  switch (variant) {
+    case 'outline':
+      Component = dynamic(() => import('@heroicons/react/outline').then((module) => module[name]));
+      break;
+
+    // case 'solid':
+    // Component = dynamic(() => import('@heroicons/react/solid').then((module) => module[name]));
+    // break;
+
+    default:
+      throw new Error(`The icon with name "${name}" has an invalid variant.`);
+  }
+
+  return (
+    <Component
+      className={cn('flex-shrink-0', {
+        'text-gray-600': color === 'dark',
+        'text-gray-400': color === 'light',
+        'h-5 w-5': size === 'sm',
+        'h-6 w-6': size === 'md',
+        'h-7 w-7': size === 'lg',
+      })}
+    />
+  );
 }

@@ -1,4 +1,3 @@
-import { ChevronRightIcon } from '@heroicons/react/solid';
 import React from 'react';
 import { Button } from 'src/components/elements/Button';
 import { Heading } from 'src/components/elements/Heading';
@@ -97,7 +96,11 @@ export function BlogPostListV1({ list, description, title }: BlogPostListV1Props
                     </>
                   )}
                 </div>
-                <Button href={blogPost.link} IconEnd={ChevronRightIcon} variant="primary">
+                <Button
+                  href={blogPost.link}
+                  iconEnd={{ name: 'ChevronRightIcon', size: 'md', color: 'light', variant: 'outline' }}
+                  variant="primary"
+                >
                   Read more
                 </Button>
               </div>

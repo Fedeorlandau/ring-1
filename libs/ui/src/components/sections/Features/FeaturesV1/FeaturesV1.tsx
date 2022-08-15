@@ -2,7 +2,7 @@ import React from 'react';
 import { Heading } from 'src/components/elements/Heading';
 import type { Icons } from 'src/components/elements/Icon';
 import { Icon } from 'src/components/elements/Icon';
-import { Paragraph } from 'src/components/elements/Paragraph';
+import { Text } from 'src/components/elements/Text';
 
 export type FeaturesV1Section = {
   id: string;
@@ -26,12 +26,12 @@ export function FeaturesV1({ title, pretitle, subtitle, features }: FeaturesV1Pr
             <Heading variant="FeaturesV1B">{pretitle}</Heading>
           </div>
           <div className="mb-4">
-            <Paragraph fontWeight="extrabold" variant="md">
+            <Text fontWeight="extrabold" variant="md">
               {title}
-            </Paragraph>
+            </Text>
           </div>
           <div className="max-w-2xl lg:mx-auto">
-            <Paragraph variant="sm">{subtitle}</Paragraph>
+            <Text variant="sm">{subtitle}</Text>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ export function FeaturesV1({ title, pretitle, subtitle, features }: FeaturesV1Pr
                     <Icon name={feature.icon} />
                   </div>
                   <div className="ml-16">
-                    <Paragraph variant="md">{feature.title}</Paragraph>
+                    <Text variant="md">{feature.title}</Text>
                   </div>
                 </dt>
                 <dd aria-label={feature.subtitle} className="mt-2 ml-16 text-base text-gray-500">

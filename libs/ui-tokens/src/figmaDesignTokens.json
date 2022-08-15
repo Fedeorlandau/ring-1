@@ -906,8 +906,7 @@
       }
     }
   },
-  "Heading": {},
-  "Paragraph": {
+  "Text": {
     "xs": {
       "mobile": {
         "value": {

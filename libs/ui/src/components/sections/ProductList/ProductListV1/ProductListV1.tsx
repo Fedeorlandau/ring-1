@@ -2,7 +2,7 @@ import React from 'react';
 import { Heading } from 'src/components/elements/Heading';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
-import { Paragraph } from 'src/components/elements/Paragraph';
+import { Text } from 'src/components/elements/Text';
 import type { ImageModel } from 'src/types';
 
 export type ProductListV1Section = {
@@ -48,11 +48,11 @@ export function ProductListV1({ products, title }: ProductListV1Props) {
                       {product.name}
                     </Link>
                   </Heading>
-                  <Paragraph variant="xs">Black</Paragraph>
+                  <Text variant="xs">Black</Text>
                 </div>
-                <Paragraph variant="sm">
+                <Text variant="sm">
                   {product.price} {product.currency}
-                </Paragraph>
+                </Text>
               </div>
             </div>
           ))}

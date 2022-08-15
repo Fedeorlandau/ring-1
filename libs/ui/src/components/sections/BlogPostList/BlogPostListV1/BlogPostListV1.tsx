@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'src/components/elements/Button';
 import { Heading } from 'src/components/elements/Heading';
 import { Image } from 'src/components/elements/Image';
-import { Paragraph } from 'src/components/elements/Paragraph';
+import { Text } from 'src/components/elements/Text';
 import { cn } from 'src/utils';
 
 export type BlogPostListV1Section = {
@@ -45,7 +45,7 @@ export function BlogPostListV1({ list, description, title }: BlogPostListV1Props
           <Heading tag="h2" variant="FeaturesV1A">
             {title}
           </Heading>
-          <Paragraph variant="md">{description}</Paragraph>
+          <Text variant="md">{description}</Text>
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
           {list.map((blogPost) => (

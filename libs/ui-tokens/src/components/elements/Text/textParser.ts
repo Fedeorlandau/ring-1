@@ -2,10 +2,10 @@ import { fillParser } from 'src/parsers/fillParser';
 import { removeDuplicatedClasses } from 'src/parsers/removeDuplicatedClasses';
 import { typographyParser } from 'src/parsers/typographyParser';
 
-import type { Paragraph, ParagraphVariant } from './paragraphSchema';
+import type { Text, TextVariant } from './textSchema';
 
-export function paragraphParser(paragraph: Paragraph) {
-  return Object.entries(paragraph).reduce((acc, [variantKey, components]) => {
+export function textParser(text: Text) {
+  return Object.entries(text).reduce((acc, [variantKey, components]) => {
     return {
       ...acc,
       [variantKey]: variantParser({ components }),
@@ -14,7 +14,7 @@ export function paragraphParser(paragraph: Paragraph) {
 }
 
 type VariantParser = {
-  components: ParagraphVariant;
+  components: TextVariant;
 };
 function variantParser({ components }: VariantParser) {
   const classes = [

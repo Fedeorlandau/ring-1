@@ -5,7 +5,7 @@ import { Heading } from 'src/components/elements/Heading';
 import { Icon } from 'src/components/elements/Icon';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
-import { Paragraph } from 'src/components/elements/Paragraph';
+import { Text } from 'src/components/elements/Text';
 import type { ImageModel } from 'src/types';
 
 export type HeroV1Section = {
@@ -134,7 +134,7 @@ export function HeroV1({
                 <span className="block xl:inline">{titleFirstRow}</span>{' '}
                 <span className="block text-indigo-600 xl:inline">{titleSecondRow}</span>
               </Heading>
-              <Paragraph variant="lg">{subtitle}</Paragraph>
+              <Text variant="lg">{subtitle}</Text>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <Button href={buttonPrimaryLink} variant="primary">
                   {buttonPrimaryText}

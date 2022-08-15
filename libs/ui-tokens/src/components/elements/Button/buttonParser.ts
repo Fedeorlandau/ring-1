@@ -11,8 +11,8 @@ import { widthParser } from 'src/parsers/widthParser';
 
 import type { Button, ButtonComponents } from './buttonSchema';
 
-export function buttonParser(paragraph: Button) {
-  return Object.entries(paragraph).reduce((acc, [variantKey, components]) => {
+export function buttonParser(button: Button) {
+  return Object.entries(button).reduce((acc, [variantKey, components]) => {
     return {
       ...acc,
       [variantKey]: variantParser({ components }),

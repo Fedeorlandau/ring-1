@@ -3,24 +3,24 @@ import React from 'react';
 import { useTheme } from 'src/foundation/theme';
 import { cn } from 'src/utils';
 
-export type ParagraphProps = {
+export type TextProps = {
   children: string | ReactNode;
   fontWeight?: 'extrabold';
   variant: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 };
 
-export function Paragraph({ children, variant, fontWeight }: ParagraphProps) {
+export function Text({ children, variant, fontWeight }: TextProps) {
   const theme = useTheme();
 
   return (
     <p
       className={cn({
         'font-extrabold': fontWeight === 'extrabold',
-        [theme.elements.Paragraph.xs]: variant === 'xs',
-        [theme.elements.Paragraph.sm]: variant === 'sm',
-        [theme.elements.Paragraph.md]: variant === 'md',
-        [theme.elements.Paragraph.lg]: variant === 'lg',
-        [theme.elements.Paragraph.xl]: variant === 'xl',
+        [theme.elements.Text.xs]: variant === 'xs',
+        [theme.elements.Text.sm]: variant === 'sm',
+        [theme.elements.Text.md]: variant === 'md',
+        [theme.elements.Text.lg]: variant === 'lg',
+        [theme.elements.Text.xl]: variant === 'xl',
       })}
     >
       {children}

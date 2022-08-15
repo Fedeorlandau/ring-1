@@ -1,5 +1,5 @@
 import { buttonSchema } from 'src/components/elements/Button/buttonSchema';
-import { paragraphSchema } from 'src/components/elements/Paragraph/paragraphSchema';
+import { textSchema } from 'src/components/elements/Text/textSchema';
 import { tailwindSchema } from 'src/schema/tailwindSchema';
 import { z } from 'zod';
 
@@ -11,7 +11,7 @@ export function validateTokens({ figmaDesignTokens }: ValidateTokens) {
   const schema = z.object({
     global: tailwindSchema,
     Button: buttonSchema,
-    Paragraph: paragraphSchema,
+    Text: textSchema,
   });
 
   schema.parse(figmaDesignTokens);

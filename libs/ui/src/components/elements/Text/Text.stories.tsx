@@ -1,19 +1,19 @@
 import type { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import type { ParagraphProps } from './Paragraph';
-import { Paragraph } from './Paragraph';
+import type { TextProps } from './Text';
+import { Text } from './Text';
 
 export default {
-  title: 'Elements/Paragraph',
-  component: Paragraph,
+  title: 'Elements/Text',
+  component: Text,
 } as Meta;
 
-const Template: Story<ParagraphProps> = (args) => (
-  <Paragraph {...args}>
+const Template: Story<TextProps> = (args) => (
+  <Text {...args}>
     Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat
     veniam occaecat fugiat aliqua.
-  </Paragraph>
+  </Text>
 );
 
 export const XS = Template.bind({});

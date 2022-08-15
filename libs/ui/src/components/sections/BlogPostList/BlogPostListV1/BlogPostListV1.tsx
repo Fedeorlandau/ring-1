@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'src/components/elements/Button';
-import { Heading } from 'src/components/elements/Heading';
 import { Image } from 'src/components/elements/Image';
 import { Text } from 'src/components/elements/Text';
 import { cn } from 'src/utils';
@@ -42,9 +41,9 @@ export function BlogPostListV1({ list, description, title }: BlogPostListV1Props
     >
       <div className="mx-auto max-w-screen-xl py-8 px-4 lg:py-16 lg:px-6">
         <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
-          <Heading tag="h2" variant="FeaturesV1A">
+          <Text tag="h2" variant="4xl">
             {title}
-          </Heading>
+          </Text>
           <Text variant="md">{description}</Text>
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
@@ -71,9 +70,9 @@ export function BlogPostListV1({ list, description, title }: BlogPostListV1Props
                   </span>
                   <span className="text-sm">{blogPost.date}</span>
                 </div>
-                <Heading variant="ProductListV1A">
+                <Text tag="h2" variant="2xl">
                   <a href={blogPost.link}>{blogPost.title}</a>
-                </Heading>
+                </Text>
                 <p className="mb-5 font-light text-gray-500 dark:text-gray-400">{blogPost.description}</p>
               </div>
               <div className="flex items-center justify-between">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Heading } from 'src/components/elements/Heading';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
 import { Text } from 'src/components/elements/Text';
@@ -28,7 +27,11 @@ export function ProductListV1({ products, title }: ProductListV1Props) {
   return (
     <section className="bg-white">
       <div className="mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        {title && <Heading variant="ProductListV1A">{title}</Heading>}
+        {title && (
+          <Text tag="h2" variant="2xl">
+            {title}
+          </Text>
+        )}
 
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
@@ -42,12 +45,12 @@ export function ProductListV1({ products, title }: ProductListV1Props) {
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
-                  <Heading variant="ProductListV1B">
+                  <Text tag="h3" variant="sm">
                     <Link href={`/p/${product.slug}`}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
                     </Link>
-                  </Heading>
+                  </Text>
                   <Text variant="xs">Black</Text>
                 </div>
                 <Text variant="sm">

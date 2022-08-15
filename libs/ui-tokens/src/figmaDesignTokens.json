@@ -1021,6 +1021,75 @@
         },
         "type": "composition"
       }
+    },
+    "2xl": {
+      "mobile": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.2xl}"
+        },
+        "type": "composition"
+      },
+      "tablet": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.3xl}"
+        },
+        "type": "composition"
+      },
+      "desktop": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.4xl}"
+        },
+        "type": "composition"
+      }
+    },
+    "3xl": {
+      "mobile": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.3xl}"
+        },
+        "type": "composition"
+      },
+      "tablet": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.4xl}"
+        },
+        "type": "composition"
+      },
+      "desktop": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.5xl}"
+        },
+        "type": "composition"
+      }
+    },
+    "4xl": {
+      "mobile": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.4xl}"
+        },
+        "type": "composition"
+      },
+      "tablet": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.5xl}"
+        },
+        "type": "composition"
+      },
+      "desktop": {
+        "value": {
+          "fill": "{palette.black}",
+          "typography": "{text.6xl}"
+        },
+        "type": "composition"
+      }
     }
   },
   "$themes": []

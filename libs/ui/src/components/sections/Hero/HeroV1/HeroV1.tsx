@@ -1,7 +1,6 @@
 import { Popover, Transition } from '@headlessui/react';
 import React, { Fragment } from 'react';
 import { Button } from 'src/components/elements/Button';
-import { Heading } from 'src/components/elements/Heading';
 import { Icon } from 'src/components/elements/Icon';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
@@ -130,10 +129,10 @@ export function HeroV1({
 
           <div className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-              <Heading variant="FeaturesV1A">
+              <Text tag="h2" variant="4xl">
                 <span className="block xl:inline">{titleFirstRow}</span>{' '}
                 <span className="block text-indigo-600 xl:inline">{titleSecondRow}</span>
-              </Heading>
+              </Text>
               <Text variant="lg">{subtitle}</Text>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <Button href={buttonPrimaryLink} variant="primary">

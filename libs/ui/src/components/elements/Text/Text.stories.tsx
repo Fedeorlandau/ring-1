@@ -40,3 +40,18 @@ export const XL = Template.bind({});
 XL.args = {
   variant: 'xl',
 };
+
+export const XL2 = Template.bind({});
+XL2.args = {
+  variant: '2xl',
+};
+
+export const XL3 = Template.bind({});
+XL3.args = {
+  variant: '3xl',
+};
+
+export const XL4 = Template.bind({});
+XL4.args = {
+  variant: '4xl',
+};

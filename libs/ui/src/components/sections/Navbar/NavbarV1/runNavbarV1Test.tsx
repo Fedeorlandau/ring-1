@@ -6,7 +6,7 @@ import type { NavbarV1Props } from './NavbarV1';
 export async function runNavbarV1Test(mock: NavbarV1Props) {
   expect(screen.getByRole('navigation', { name: '' })).toBeInTheDocument();
 
-  expect(screen.getByRole('img', { name: mock.logo.alt })).toHaveAttribute('src', mock.logo.src);
+  expect(screen.getByRole('img', { name: mock.logo.alt })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: `${mock.title} ${mock.logo.alt}` })).toHaveAttribute('href', '/');
 
   mock.navigation.forEach((item) => {

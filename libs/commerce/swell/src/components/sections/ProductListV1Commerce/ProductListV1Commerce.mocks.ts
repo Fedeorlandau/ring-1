@@ -14,7 +14,7 @@ export const getProductsMock = {
       slug: 'productSlug',
       price: '20',
       currency: 'EUR',
-      images: [{ file: { url: 'fileUrl' } }],
+      images: [{ file: { url: 'https://fileUrl' } }],
     },
   ],
 };
@@ -25,7 +25,7 @@ export const getProductsResultMock = {
       slug: 'productSlug',
       price: '20',
       currency: 'EUR',
-      images: [{ src: 'fileUrl', alt: '' }],
+      images: [{ src: 'https://fileUrl', alt: '' }],
     },
   ],
 };

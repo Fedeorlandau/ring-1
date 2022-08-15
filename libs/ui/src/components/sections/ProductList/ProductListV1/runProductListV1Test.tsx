@@ -8,6 +8,6 @@ export function runProductListV1Test(mock: ProductListV1Props) {
   mock.products.forEach((product) => {
     expect(screen.getByRole('heading', { name: product.name, level: 3 })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: product.name })).toHaveAttribute('href', `/p/${product.slug}`);
-    expect(screen.getByRole('img', { name: product.images[0].alt })).toHaveAttribute('src', product.images[0].src);
+    expect(screen.getByRole('img', { name: product.images[0].alt })).toBeInTheDocument();
   });
 }

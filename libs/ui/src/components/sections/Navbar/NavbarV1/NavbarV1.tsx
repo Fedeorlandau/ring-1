@@ -56,7 +56,9 @@ export function NavbarV1({
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">{title}</span>
-              <Image alt={logo.alt} className="h-8 w-auto sm:h-10" src={logo.src} />
+              <div className="relative h-8 w-8 sm:h-10 sm:w-10">
+                <Image alt={logo.alt} src={logo.src} />
+              </div>
             </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -160,8 +162,8 @@ export function NavbarV1({
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
-                <div>
-                  <Image alt={logo.alt} className="h-8 w-auto" src={logo.src} />
+                <div className="relative h-8 w-8">
+                  <Image alt={logo.alt} src={logo.src} />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

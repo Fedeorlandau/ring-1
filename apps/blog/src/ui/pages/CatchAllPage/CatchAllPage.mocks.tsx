@@ -21,7 +21,7 @@ export const main: UISections = [
       buttonPrimaryText: 'Read the blog',
       buttonPrimaryLink: '/blog',
       image: {
-        src: 'logo.png',
+        src: '/logo.png',
         alt: 'Lorenzo GM',
       },
     },

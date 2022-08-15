@@ -5,7 +5,7 @@ import type { HeroV1Props } from './HeroV1';
 export function runHeroV1Test(mock: HeroV1Props) {
   expect(screen.getByRole('navigation', { name: 'main' })).toBeInTheDocument();
 
-  expect(screen.getByRole('img', { name: mock.logo.alt })).toHaveAttribute('src', mock.logo.src);
+  expect(screen.getByRole('img', { name: mock.logo.alt })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: `${mock.title} ${mock.logo.alt}` })).toHaveAttribute('href', '/');
 
   mock.navigation.forEach((item) => {
@@ -21,5 +21,5 @@ export function runHeroV1Test(mock: HeroV1Props) {
     mock.buttonSecondaryLink,
   );
 
-  expect(screen.getByRole('img', { name: mock.image.alt })).toHaveAttribute('src', mock.image.src);
+  expect(screen.getByRole('img', { name: mock.image.alt })).toBeInTheDocument();
 }

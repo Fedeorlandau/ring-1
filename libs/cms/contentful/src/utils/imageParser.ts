@@ -11,5 +11,5 @@ export function imageParser({ fields }: ImageParserProps) {
     return { src: '', alt: fields.description || '' };
   }
 
-  return { src: fields.file.url, alt: fields.description || '' };
+  return { src: fields.file.url.replace('//', 'https://'), alt: fields.description || '' };
 }

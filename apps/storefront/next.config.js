@@ -8,11 +8,19 @@ const withTranspileModules = require('next-transpile-modules')([
 ]);
 
 module.exports = withTranspileModules({
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
   i18n: {
     locales: ['en', 'es'],
     // This is the default locale you want to be used when visiting
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en',
+  },
+  images: {
+    domains: ['images.ctfassets.net', 'cdn.schema.io'],
   },
   reactStrictMode: true,
   typescript: {

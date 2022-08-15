@@ -59,7 +59,7 @@ export const getSectionsExpectedResult: CMSSections = [
       },
       logo: {
         alt: '',
-        src: '//images.ctfassets.net/54qcnb7au56m/PcSUX1RjdbC1UEZu9C0Ap/decb85031e48ebefde6486b1b4cc84da/valtech_white.png',
+        src: 'https://images.ctfassets.net/54qcnb7au56m/PcSUX1RjdbC1UEZu9C0Ap/decb85031e48ebefde6486b1b4cc84da/valtech_white.png',
       },
       navigation: [{ link: 'product-list-page', title: 'Product List Page' }],
       subtitle:

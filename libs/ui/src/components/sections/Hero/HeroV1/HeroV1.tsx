@@ -136,11 +136,9 @@ export function HeroV1({
               </Heading>
               <Paragraph variant="lg">{subtitle}</Paragraph>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
-                  <Button href={buttonPrimaryLink} variant="primary">
-                    {buttonPrimaryText}
-                  </Button>
-                </div>
+                <Button href={buttonPrimaryLink} variant="primary">
+                  {buttonPrimaryText}
+                </Button>
                 {buttonSecondaryText && buttonSecondaryLink && (
                   <div className="mt-3 sm:mt-0 sm:ml-3">
                     <Button href={buttonSecondaryLink} variant="secondary">

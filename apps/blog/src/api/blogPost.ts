@@ -32,7 +32,7 @@ function find(fPath?: string): Array<BlogPost> {
     }
 
     const filePath = path.join(folderPath, folder, file);
-    const link = file.split('.mdx')[0];
+    const link = `/${file.split('.mdx')[0]}`;
 
     const markdownWithMeta = fs.readFileSync(filePath, 'utf-8');
     const { data } = grayMatter(markdownWithMeta);

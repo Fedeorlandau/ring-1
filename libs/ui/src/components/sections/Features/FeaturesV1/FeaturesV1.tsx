@@ -22,12 +22,12 @@ export function FeaturesV1({ title, pretitle, subtitle, features }: FeaturesV1Pr
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <div className="mb-2">
-            <Text tag="h2" uppercase variant="md">
+            <Text tag="h2" variant="md">
               {pretitle}
             </Text>
           </div>
           <div className="mb-4">
-            <Text fontWeight="extrabold" variant="md">
+            <Text fontWeight="extrabold" variant="3xl">
               {title}
             </Text>
           </div>

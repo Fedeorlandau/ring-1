@@ -2,6 +2,8 @@ name: Dependabot
 
 on:
   pull_request:
+    branches:
+      - dependabot/*
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

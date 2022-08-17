@@ -263,7 +263,7 @@
       },
       "primary": {
         "main": {
-          "value": "{colors.black}",
+          "value": "{colors.indigo.600}",
           "type": "color"
         },
         "light": {

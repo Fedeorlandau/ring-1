@@ -36,6 +36,7 @@
     "sf": "yarn workspace @ring/storefront",
     "💡 LIBS": "##################### 🖖🏻 LIBS ALIASES 👇 #####################",
     "cf": "yarn workspace @ring/contentful",
+    "c": "yarn workspace @ring/contracts",
     "sb": "yarn workspace @ring/cms-storyblok",
     "sw": "yarn workspace @ring/swell",
     "ui": "yarn workspace @ring/ui",

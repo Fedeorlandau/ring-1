@@ -89,6 +89,18 @@ updates:
       prefix: fix
       prefix-development: chore
       include: scope
+    directory: '/libs/contracts'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: '@ring/*'
+
+  - package-ecosystem: 'npm'
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
     directory: '/libs/ui'
     schedule:
       interval: 'daily'

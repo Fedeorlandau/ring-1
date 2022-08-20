@@ -39,6 +39,7 @@ jobs:
             contentful
             storyblok
             swell
+            contracts
             logger
             logger-lambda
             ui

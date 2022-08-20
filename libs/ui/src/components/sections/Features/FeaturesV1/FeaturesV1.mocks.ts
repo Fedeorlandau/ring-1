@@ -1,6 +1,6 @@
-import type { FeaturesV1Props, FeaturesV1Section } from './FeaturesV1';
+import type { FeaturesV1SectionType, FeaturesV1UIType } from '@ring/contracts';
 
-export const featuresV1Mock: FeaturesV1Props = {
+export const FeaturesV1Mock: FeaturesV1UIType = {
   title: 'A better way to send money',
   pretitle: 'Transactions',
   subtitle:
@@ -33,8 +33,8 @@ export const featuresV1Mock: FeaturesV1Props = {
   ],
 };
 
-export const featuresV1SectionMock: FeaturesV1Section = {
+export const FeaturesV1SectionMock: FeaturesV1SectionType = {
   id: 'FeaturesV1',
   name: 'FeaturesV1',
-  props: featuresV1Mock,
+  props: FeaturesV1Mock,
 };

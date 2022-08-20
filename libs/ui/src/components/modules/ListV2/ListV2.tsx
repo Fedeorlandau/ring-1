@@ -1,12 +1,8 @@
+import type { ListV2Type } from '@ring/contracts';
 import React from 'react';
-import type { IconProps } from 'src/components/elements/Icon';
 import { Icon } from 'src/components/elements/Icon';
 
-export type ListV2Props = {
-  items: Array<{ title: string; link: string; icon: IconProps['name']; description: string }>;
-};
-
-export function ListV2({ items }: ListV2Props) {
+export function ListV2({ items }: ListV2Type) {
   return (
     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
       {items.map((item) => (

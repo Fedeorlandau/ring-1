@@ -1,12 +1,8 @@
+import type { ListV3Type } from '@ring/contracts';
 import React from 'react';
-import type { IconProps } from 'src/components/elements/Icon/Icon';
 import { Icon } from 'src/components/elements/Icon/Icon';
 
-export type ListV3Props = {
-  items: Array<{ title: string; link: string; icon: IconProps['name'] }>;
-};
-
-export function ListV3({ items }: ListV3Props) {
+export function ListV3({ items }: ListV3Type) {
   return (
     <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
       {items.map((item) => (

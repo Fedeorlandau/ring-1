@@ -1,5 +1,5 @@
+import type { CMSSections } from '@ring/contracts';
 import { logger } from '@ring/logger';
-import type { CMSSections } from 'src/components/sections';
 import { FeaturesV1CMS } from 'src/components/sections/FeaturesV1CMS';
 import { HeroV1CMS } from 'src/components/sections/HeroV1CMS/HeroV1CMS';
 import { ProductListV1CMS } from 'src/components/sections/ProductListV1CMS';
@@ -25,7 +25,7 @@ export async function getSections(slug: string): Promise<CMSSections> {
 
   const { fields } = entries.items[0];
 
-  const sections: CMSSections = fields.sections.map((section) => {
+  const sections = fields.sections.map((section) => {
     // @ts-expect-error don't want to fix this now
     switch (section.sys.contentType.sys.id) {
       case 'FeaturesV1':

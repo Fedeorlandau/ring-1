@@ -1,44 +1,14 @@
 import { Popover, Transition } from '@headlessui/react';
+import type { NavbarV1UIType } from '@ring/contracts';
 import React, { Fragment } from 'react';
 import { Button } from 'src/components/elements/Button';
-import type { IconProps } from 'src/components/elements/Icon/Icon';
 import { Icon } from 'src/components/elements/Icon/Icon';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
-import type { ListV1Props } from 'src/components/modules/ListV1';
 import { ListV1 } from 'src/components/modules/ListV1';
-import type { ListV2Props } from 'src/components/modules/ListV2';
 import { ListV2 } from 'src/components/modules/ListV2';
-import type { ListV3Props } from 'src/components/modules/ListV3';
 import { ListV3 } from 'src/components/modules/ListV3';
-import type { ImageModel } from 'src/types';
 import { cn } from 'src/utils';
-
-export type NavbarV1Section = {
-  id: string;
-  name: 'NavbarV1';
-  props: NavbarV1Props;
-};
-
-export type NavbarV1Props = {
-  title: string;
-  logo: ImageModel;
-  navigation: Array<NavigationItem>;
-  primaryButtonLink: string;
-  primaryButtonTitle: string;
-  secondaryButtonLink: string;
-  secondaryButtonTitle: string;
-};
-
-type NavigationItem = {
-  title: string;
-  link: string;
-  icon?: IconProps['name'];
-  description?: string;
-  items?: ListV2Props['items'];
-  callsToAction?: ListV3Props;
-  list?: ListV1Props;
-};
 
 export function NavbarV1({
   title,
@@ -48,7 +18,7 @@ export function NavbarV1({
   primaryButtonTitle,
   secondaryButtonLink,
   secondaryButtonTitle,
-}: NavbarV1Props) {
+}: NavbarV1UIType) {
   return (
     <Popover className="relative bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -104,24 +74,17 @@ export function NavbarV1({
                       >
                         <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                           <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                            {navigationLevelOneItem?.items && (
-                              <ListV2
-                                // eslint-disable-next-line react/jsx-props-no-spreading
-                                items={navigationLevelOneItem.items}
-                              />
-                            )}
+                            {navigationLevelOneItem?.items && <ListV2 items={navigationLevelOneItem.items.items} />}
 
                             {navigationLevelOneItem?.callsToAction && (
-                              <ListV3
-                                // eslint-disable-next-line react/jsx-props-no-spreading
-                                {...navigationLevelOneItem.callsToAction}
-                              />
+                              <ListV3 items={navigationLevelOneItem.callsToAction.items} />
                             )}
 
                             {navigationLevelOneItem?.list && (
                               <ListV1
-                                // eslint-disable-next-line react/jsx-props-no-spreading
-                                {...navigationLevelOneItem.list}
+                                items={navigationLevelOneItem.list.items}
+                                link={navigationLevelOneItem.list.link}
+                                title={navigationLevelOneItem.list.title}
                               />
                             )}
                           </div>
@@ -174,12 +137,7 @@ export function NavbarV1({
               </div>
               <div className="mt-6">
                 <nav aria-label="main" className="grid gap-y-8">
-                  {navigation[0]?.items && (
-                    <ListV2
-                      // eslint-disable-next-line react/jsx-props-no-spreading
-                      items={navigation[0].items}
-                    />
-                  )}
+                  {navigation[0]?.items && <ListV2 items={navigation[0].items.items} />}
                 </nav>
               </div>
             </div>

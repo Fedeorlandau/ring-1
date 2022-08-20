@@ -1,7 +1,11 @@
 import { server } from 'src/mocks/server';
 
 import { getSections } from './getSections';
-import { getSectionsExpectedResult, noSectionsHandler, unknownSectionHandler } from './getSections.mocks';
+import {
+  getEntriesByPageWithoutSectionsMock,
+  getSectionsExpectedResult,
+  unknownSectionHandler,
+} from './getSections.mocks';
 
 describe('getSections', () => {
   test('getSections', async () => {
@@ -11,7 +15,7 @@ describe('getSections', () => {
   });
 
   test('no sections', async () => {
-    server.use(noSectionsHandler);
+    server.use(getEntriesByPageWithoutSectionsMock);
 
     const sections = await getSections('/');
 

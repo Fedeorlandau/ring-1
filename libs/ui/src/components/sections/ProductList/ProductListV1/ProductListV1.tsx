@@ -1,29 +1,10 @@
+import type { ProductListV1UIType } from '@ring/contracts';
 import React from 'react';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
 import { Text } from 'src/components/elements/Text';
-import type { ImageModel } from 'src/types';
 
-export type ProductListV1Section = {
-  id: string;
-  name: 'ProductListV1';
-  props: ProductListV1Props;
-};
-
-export type ProductListV1Props = {
-  products: Array<ProductListV1Product>;
-  title?: string;
-};
-
-export type ProductListV1Product = {
-  name: string;
-  slug: string;
-  price: string;
-  currency: string;
-  images: Array<ImageModel>;
-};
-
-export function ProductListV1({ products, title }: ProductListV1Props) {
+export function ProductListV1({ products, title }: ProductListV1UIType) {
   return (
     <section className="bg-white">
       <div className="mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">

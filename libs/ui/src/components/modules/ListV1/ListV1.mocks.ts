@@ -1,6 +1,6 @@
-import type { ListV1Props } from './ListV1';
+import type { ListV1Type } from '@ring/contracts';
 
-export const ListV1Mock: ListV1Props = {
+export const ListV1Mock: ListV1Type = {
   title: 'My List',
   link: {
     title: 'View all',

@@ -1,6 +1,6 @@
-import type { BlogPostListV1Props, BlogPostListV1Section } from './BlogPostListV1';
+import type { BlogPostListV1UIType } from '@ring/contracts';
 
-export const blogPostListV1Mock: BlogPostListV1Props = {
+export const BlogPostListV1Mock: BlogPostListV1UIType = {
   title: 'title',
   description: 'description',
   list: [
@@ -27,10 +27,4 @@ export const blogPostListV1Mock: BlogPostListV1Props = {
       title: 'Blog with Next.js and Contentful',
     },
   ],
-};
-
-export const blogPostListV1SectionMock: BlogPostListV1Section = {
-  id: 'BlogPostListV1',
-  name: 'BlogPostListV1',
-  props: blogPostListV1Mock,
 };

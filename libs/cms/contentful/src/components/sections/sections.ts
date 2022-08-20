@@ -1,5 +1,3 @@
-import type { FeaturesV1CMSReturn } from './FeaturesV1CMS';
-import type { HeroV1CMSReturn } from './HeroV1CMS';
-import type { ProductListV1CMSReturn } from './ProductListV1CMS';
+import type { TypeFeaturesV1, TypeHeroV1, TypeProductListV1 } from 'src/types/generated/contentful';
 
-export type CMSSections = Array<FeaturesV1CMSReturn | HeroV1CMSReturn | ProductListV1CMSReturn>;
+export type ContentfulSections = Array<TypeFeaturesV1 | TypeHeroV1 | TypeProductListV1>;

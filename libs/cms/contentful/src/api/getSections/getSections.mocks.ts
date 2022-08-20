@@ -1,7 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { rest } from 'msw';
 
-import type { CMSSections } from '../../components/sections';
 import { featuresV1Mock } from '../../components/sections/FeaturesV1CMS/FeaturesV1CMS.mocks';
 import { heroV1Mock } from '../../components/sections/HeroV1CMS/HeroV1CMS.mocks';
 import { productListV1Mock } from '../../components/sections/ProductListV1CMS/ProductListV1CMS.mocks';
@@ -9,13 +8,13 @@ import { productListV1Mock } from '../../components/sections/ProductListV1CMS/Pr
 type GetEntriesHandlerProps = {
   mock: Record<string, unknown>;
 };
-export function getEntriesHandler({ mock }: GetEntriesHandlerProps) {
+export function getSectionsHandler({ mock }: GetEntriesHandlerProps) {
   return rest.get('https://cdn.contentful.com/spaces/CONTENTFUL_SPACE_ID/environments/master/entries', (_, res, ctx) =>
     res(ctx.status(200), ctx.json(mock)),
   );
 }
 
-export const getSectionsMock = {
+export const getEntriesByPage = {
   sys: { type: 'Array' },
   total: 1,
   skip: 0,
@@ -42,9 +41,9 @@ export const getSectionsMock = {
     },
   ],
 };
-export const getSectionsHandler = getEntriesHandler({ mock: getSectionsMock });
+export const getEntriesByPageMock = getSectionsHandler({ mock: getEntriesByPage });
 
-export const getSectionsExpectedResult: CMSSections = [
+export const getSectionsExpectedResult = [
   {
     id: '2NbmpbgYU2Ee9ykiOwUDEl',
     name: 'HeroV1',
@@ -96,14 +95,14 @@ export const getSectionsExpectedResult: CMSSections = [
   },
 ];
 
-export const noSectionsMock = {
+export const getEntriesByPageWithoutSections = {
   sys: { type: 'Array' },
   total: 1,
   skip: 0,
   limit: 2,
   items: [],
 };
-export const noSectionsHandler = getEntriesHandler({ mock: noSectionsMock });
+export const getEntriesByPageWithoutSectionsMock = getSectionsHandler({ mock: getEntriesByPageWithoutSections });
 
 const unkwownSection = {
   metadata: { tags: [] },
@@ -221,4 +220,4 @@ export const unknownSectionMock = {
   ],
 };
 
-export const unknownSectionHandler = getEntriesHandler({ mock: unknownSectionMock });
+export const unknownSectionHandler = getSectionsHandler({ mock: unknownSectionMock });

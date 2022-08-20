@@ -1,8 +1,7 @@
-import type { CMSSections } from '@ring/cms';
 import { getSections } from '@ring/cms';
 import type { CommerceSections } from '@ring/commerce';
 import { getSectionsCommerceData } from '@ring/commerce';
-import type { UISections } from '@ring/ui';
+import type { CMSSections, Sections } from '@ring/contracts';
 import type { GetStaticProps } from 'next';
 import { getSlug } from 'src/utils/getSlug';
 
@@ -17,7 +16,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     sections: sectionFromCMSNames,
   });
 
-  // @ts-expect-error no time now to fix this
   const sections = mergeSections({ sectionsFromCMS, sectionsFromCommerce });
 
   return { props: { main: sections } };
@@ -27,7 +25,7 @@ type MergeSectionsProps = {
   sectionsFromCMS: CMSSections;
   sectionsFromCommerce: CommerceSections;
 };
-function mergeSections({ sectionsFromCMS, sectionsFromCommerce }: MergeSectionsProps): UISections {
+function mergeSections({ sectionsFromCMS, sectionsFromCommerce }: MergeSectionsProps): Sections {
   // @ts-expect-error no time now to fix this
   return sectionsFromCMS.map((sectionFromCMS, index) => {
     return {

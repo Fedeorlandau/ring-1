@@ -6,10 +6,10 @@ import { z } from 'zod';
 const NavigationItemSchema = z.object({
   title: z.string(),
   link: z.string(),
-  icon: IconNameSchema.nullable(),
-  items: ListV2Schema.nullable(),
-  callsToAction: ListV3Schema,
-  list: ListV1Schema.nullable(),
+  icon: IconNameSchema.optional(),
+  items: ListV2Schema.optional(),
+  callsToAction: ListV3Schema.optional(),
+  list: ListV1Schema.optional(),
 });
 
 export const NavbarV1CMSSchema = z.object({

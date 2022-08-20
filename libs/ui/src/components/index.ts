@@ -1,4 +1,3 @@
-export type { Icons } from './elements/Icon';
 export * from './RenderSections';
 export * from './sections';
 

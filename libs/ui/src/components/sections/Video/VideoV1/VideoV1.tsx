@@ -1,9 +1,9 @@
+import type { VideoType } from '@ring/contracts';
 import React from 'react';
-import type { VideoModel } from 'src/types';
 
 export type VideoV1Props = {
   autoPlay?: boolean;
-  video: VideoModel;
+  video: VideoType;
 };
 
 export function VideoV1({ autoPlay, video }: VideoV1Props) {

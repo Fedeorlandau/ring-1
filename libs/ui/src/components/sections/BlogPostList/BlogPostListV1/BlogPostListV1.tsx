@@ -1,35 +1,16 @@
+import type { BlogPostListV1UIType } from '@ring/contracts';
 import React from 'react';
 import { Button } from 'src/components/elements/Button';
 import { Image } from 'src/components/elements/Image';
+import { Link } from 'src/components/elements/Link';
 import { Text } from 'src/components/elements/Text';
 import { cn } from 'src/utils';
-
-export type BlogPostListV1Section = {
-  id: string;
-  name: 'BlogPostListV1';
-  props: BlogPostListV1Props;
-};
-
-export type BlogPostListV1Props = {
-  description: string;
-  title: string;
-  list: Array<BlogPost>;
-};
-
-type BlogPost = {
-  date: string;
-  description: string;
-  link: string;
-  tags: Array<string>;
-  title: string;
-  author?: string;
-};
 
 function useTheme() {
   return 'light';
 }
 
-export function BlogPostListV1({ list, description, title }: BlogPostListV1Props) {
+export function BlogPostListV1({ list, description, title }: BlogPostListV1UIType) {
   const theme = useTheme();
 
   return (
@@ -71,7 +52,7 @@ export function BlogPostListV1({ list, description, title }: BlogPostListV1Props
                   <span className="text-sm">{blogPost.date}</span>
                 </div>
                 <Text tag="h2" variant="2xl">
-                  <a href={blogPost.link}>{blogPost.title}</a>
+                  <Link href={blogPost.link}>{blogPost.title}</Link>
                 </Text>
                 <p className="mb-5 font-light text-gray-500 dark:text-gray-400">{blogPost.description}</p>
               </div>

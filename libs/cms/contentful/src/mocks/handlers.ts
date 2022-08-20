@@ -1,3 +1,3 @@
-import { getSectionsHandler } from 'src/api/getSections/getSections.mocks';
+import { getEntriesByPageMock } from 'src/api/getSections/getSections.mocks';
 
-export const handlers = [getSectionsHandler];
+export const handlers = [getEntriesByPageMock];

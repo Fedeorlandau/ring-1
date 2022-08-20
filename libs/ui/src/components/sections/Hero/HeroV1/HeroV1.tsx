@@ -1,31 +1,11 @@
 import { Popover, Transition } from '@headlessui/react';
+import type { HeroV1UIType } from '@ring/contracts';
 import React, { Fragment } from 'react';
 import { Button } from 'src/components/elements/Button';
 import { Icon } from 'src/components/elements/Icon';
 import { Image } from 'src/components/elements/Image';
 import { Link } from 'src/components/elements/Link';
 import { Text } from 'src/components/elements/Text';
-import type { ImageModel } from 'src/types';
-
-export type HeroV1Section = {
-  id: string;
-  name: 'HeroV1';
-  props: HeroV1Props;
-};
-
-export type HeroV1Props = {
-  title: string;
-  logo: ImageModel;
-  buttonPrimaryLink: string;
-  buttonPrimaryText: string;
-  buttonSecondaryLink?: string;
-  buttonSecondaryText?: string;
-  image: ImageModel;
-  navigation: Array<{ title: string; link: string }>;
-  subtitle: string;
-  titleFirstRow: string;
-  titleSecondRow: string;
-};
 
 export function HeroV1({
   title,
@@ -39,7 +19,7 @@ export function HeroV1({
   buttonPrimaryText,
   buttonSecondaryLink,
   buttonSecondaryText,
-}: HeroV1Props) {
+}: HeroV1UIType) {
   return (
     <section className="relative overflow-hidden bg-white ">
       <div className="mx-auto max-w-7xl">

@@ -6,15 +6,17 @@ import * as stories from './DefaultLayout.stories';
 
 const { DefaultLayout } = composeStories(stories);
 
-test('<DefaultLayout />', () => {
-  render(<DefaultLayout />);
+describe('<DefaultLayout />', () => {
+  test('Expect <header>, <main> and <footer>', () => {
+    render(<DefaultLayout />);
 
-  // header
-  expect(screen.getByRole('banner', { name: '' })).toBeInTheDocument();
+    // header
+    expect(screen.getByRole('banner', { name: '' })).toBeInTheDocument();
 
-  // main
-  expect(screen.getByRole('main', { name: '' })).toBeInTheDocument();
+    // main
+    expect(screen.getByRole('main', { name: '' })).toBeInTheDocument();
 
-  // footer
-  expect(screen.getByRole('contentinfo', { name: '' })).toBeInTheDocument();
+    // footer
+    expect(screen.getByRole('contentinfo', { name: '' })).toBeInTheDocument();
+  });
 });

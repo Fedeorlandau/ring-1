@@ -1,13 +1,11 @@
-import type { HeroV1Section } from '@ring/ui';
+import type { HeroV1CMSType } from '@ring/contracts';
 
 import type { TypeHeroV1 } from '../../../types/generated/contentful';
 import type { LinkParserProps } from '../../../utils';
 import { linkParser } from '../../../utils';
 import { imageParser } from '../../../utils/imageParser';
 
-export type HeroV1CMSReturn = HeroV1Section;
-
-export function HeroV1CMS({ fields, sys }: TypeHeroV1): HeroV1CMSReturn {
+export function HeroV1CMS({ fields, sys }: TypeHeroV1): HeroV1CMSType {
   return {
     id: sys.id,
     name: 'HeroV1',

@@ -1,9 +1,9 @@
 import { rest } from 'msw';
 
-type GetEntriesHandlerProps = {
+type ProductListV1CommerceHandlerProps = {
   mock: Record<string, unknown>;
 };
-export function getHandler({ mock }: GetEntriesHandlerProps) {
+export function ProductListV1CommerceHandler({ mock }: ProductListV1CommerceHandlerProps) {
   return rest.get('https://api.swell.store/products', (_, res, ctx) => res(ctx.status(200), ctx.json(mock)));
 }
 
@@ -29,4 +29,4 @@ export const getProductsResultMock = {
     },
   ],
 };
-export const getProductsHandler = getHandler({ mock: getProductsMock });
+export const getProductsHandler = ProductListV1CommerceHandler({ mock: getProductsMock });

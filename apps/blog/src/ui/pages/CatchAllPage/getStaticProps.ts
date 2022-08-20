@@ -1,8 +1,9 @@
 import type { GetStaticProps } from 'next';
-
-import { main } from './CatchAllPage.mocks';
+import { blogPost } from 'src/api';
 
 // eslint-disable-next-line func-style
 export const getStaticProps: GetStaticProps = () => {
-  return { props: { main } };
+  const blogPostEntries = blogPost.find();
+
+  return { props: { main: [blogPostEntries] } };
 };

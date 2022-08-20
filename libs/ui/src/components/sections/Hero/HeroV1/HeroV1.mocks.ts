@@ -1,6 +1,6 @@
-import type { HeroV1Props } from './HeroV1';
+import type { HeroV1UIType } from '@ring/contracts';
 
-export const heroV1Mock: HeroV1Props = {
+export const HeroV1Mock: HeroV1UIType = {
   title: 'Ring',
   logo: {
     src: 'https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg',

@@ -1,8 +1,8 @@
 import type { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { featuresV1SectionMock } from 'src/components/sections/Features/FeaturesV1/FeaturesV1.mocks';
-import { navbarV1SectionMock } from 'src/components/sections/Navbar/NavbarV1/NavbarV1.mocks';
-import { productListV1SectionMock } from 'src/components/sections/ProductList/ProductListV1/ProductListV1.mocks';
+import { FeaturesV1SectionMock } from 'src/components/sections/Features/FeaturesV1/FeaturesV1.mocks';
+import { NavbarV1SectionMock } from 'src/components/sections/Navbar/NavbarV1/NavbarV1.mocks';
+import { ProductListV1SectionMock } from 'src/components/sections/ProductList/ProductListV1/ProductListV1.mocks';
 
 import type { DefaultLayoutProps } from './DefaultLayout';
 import { DefaultLayout as DefaultLayoutUI } from './DefaultLayout';
@@ -18,8 +18,7 @@ const Template: Story<DefaultLayoutProps> = (args) => <DefaultLayoutUI {...args}
 // https://storybook.js.org/docs/react/workflows/unit-testing
 export const DefaultLayout = Template.bind({});
 DefaultLayout.args = {
-  header: [navbarV1SectionMock],
-  // @ts-expect-error forcing an error for testing
-  main: [featuresV1SectionMock, { id: 'unknown', name: 'unknown', props: {} }],
-  footer: [productListV1SectionMock],
+  header: [NavbarV1SectionMock],
+  main: [FeaturesV1SectionMock],
+  footer: [ProductListV1SectionMock],
 };

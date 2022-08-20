@@ -1,21 +1,11 @@
+import type { Sections } from '@ring/contracts';
 import { logger } from '@ring/logger';
 import React from 'react';
-import type {
-  BlogPostListV1Section,
-  FeaturesV1Section,
-  HeroV1Section,
-  NavbarV1Section,
-  ProductListV1Section,
-} from 'src/components/sections';
 import { BlogPostListV1, FeaturesV1, HeroV1, NavbarV1, ProductListV1 } from 'src/components/sections';
 
 type RenderSectionsProps = {
-  sections: UISections;
+  sections: Sections;
 };
-
-export type UISections = Array<
-  BlogPostListV1Section | FeaturesV1Section | HeroV1Section | NavbarV1Section | ProductListV1Section
->;
 
 const components = {
   BlogPostListV1,
@@ -32,12 +22,13 @@ export function RenderSections({ sections }: RenderSectionsProps) {
         const Component = components[section.name];
 
         if (!Component) {
+          // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
           logger.error(`Unknown component ${section.name}`);
           return null;
         }
 
         return (
-          // @ts-expect-error ts can't infer the type of props
+          // @ts-expect-error one day I will fix this
           <Component
             key={section.id}
             // eslint-disable-next-line react/jsx-props-no-spreading

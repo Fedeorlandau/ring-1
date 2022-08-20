@@ -1,6 +1,6 @@
-import type { ProductListV1Props, ProductListV1Section } from './ProductListV1';
+import type { ProductListV1SectionType, ProductListV1UIType } from '@ring/contracts';
 
-export const productListV1Mock: ProductListV1Props = {
+export const ProductListV1Mock: ProductListV1UIType = {
   title: 'Customers also purchased',
   products: [
     {
@@ -78,8 +78,8 @@ export const productListV1Mock: ProductListV1Props = {
   ],
 };
 
-export const productListV1SectionMock: ProductListV1Section = {
+export const ProductListV1SectionMock: ProductListV1SectionType = {
   id: 'ProductListV1',
   name: 'ProductListV1',
-  props: productListV1Mock,
+  props: ProductListV1Mock,
 };

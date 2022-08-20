@@ -25,6 +25,7 @@
     "_clean:turbo": "shx rm -rf ./.turbo"
   },
   "dependencies": {
+    "@ring/contracts": "*",
     "@ring/logger": "*",
     "@ring/ui": "*",
     "node-fetch": "2.6.0"

@@ -1,11 +1,11 @@
+import type { Sections } from '@ring/contracts';
 import React from 'react';
-import type { UISections } from 'src/components';
 import { RenderSections } from 'src/components';
 
 export type DefaultLayoutProps = {
-  main: UISections;
-  footer?: UISections;
-  header?: UISections;
+  main: Sections;
+  footer?: Sections;
+  header?: Sections;
 };
 
 export function DefaultLayout({ header, footer, main }: DefaultLayoutProps) {

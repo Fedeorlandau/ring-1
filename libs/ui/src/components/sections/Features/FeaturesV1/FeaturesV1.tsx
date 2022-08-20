@@ -1,22 +1,9 @@
+import type { FeaturesV1UIType } from '@ring/contracts';
 import React from 'react';
-import type { Icons } from 'src/components/elements/Icon';
 import { Icon } from 'src/components/elements/Icon';
 import { Text } from 'src/components/elements/Text';
 
-export type FeaturesV1Section = {
-  id: string;
-  name: 'FeaturesV1';
-  props: FeaturesV1Props;
-};
-
-export type FeaturesV1Props = {
-  features: Array<{ title: string; subtitle: string; icon: Icons }>;
-  title: string;
-  pretitle: string;
-  subtitle: string;
-};
-
-export function FeaturesV1({ title, pretitle, subtitle, features }: FeaturesV1Props) {
+export function FeaturesV1({ title, pretitle, subtitle, features }: FeaturesV1UIType) {
   return (
     <div className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

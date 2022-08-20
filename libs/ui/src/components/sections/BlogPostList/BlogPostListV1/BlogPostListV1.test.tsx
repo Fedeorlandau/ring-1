@@ -1,16 +1,31 @@
 import { composeStories } from '@storybook/testing-react';
 import React from 'react';
-import { render } from 'src/__test__/test-utils';
+import { render, screen, within } from 'src/__test__/test-utils';
 
-import { blogPostListV1Mock } from './BlogPostListV1.mocks';
+import { BlogPostListV1Mock } from './BlogPostListV1.mocks';
 import * as stories from './BlogPostListV1.stories';
-import { runBlogPostListV1Test } from './runBlogPostListV1Test';
 
 const { BlogPostListV1 } = composeStories(stories);
 
-// eslint-disable-next-line jest/expect-expect
 test('<BlogPostListV1 />', () => {
   render(<BlogPostListV1 />);
 
-  runBlogPostListV1Test(blogPostListV1Mock);
+  expect(screen.getByRole('heading', { name: BlogPostListV1Mock.title, level: 2 })).toBeInTheDocument();
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  expect(screen.getByText(BlogPostListV1Mock.description)).toBeInTheDocument();
+
+  const articles = screen.getAllByRole('article');
+  articles.forEach((article, index) => {
+    expect(
+      within(article).getByRole('heading', { name: BlogPostListV1Mock.list[index].title, level: 2 }),
+    ).toBeInTheDocument();
+    expect(within(article).getByRole('link', { name: BlogPostListV1Mock.list[index].title })).toHaveAttribute(
+      'href',
+      BlogPostListV1Mock.list[index].link,
+    );
+    expect(within(article).getByRole('link', { name: 'Read more' })).toHaveAttribute(
+      'href',
+      BlogPostListV1Mock.list[index].link,
+    );
+  });
 });

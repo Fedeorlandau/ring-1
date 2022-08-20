@@ -1,3 +1,3 @@
-import type { ProductListV1CommerceResult } from './ProductListV1Commerce/ProductListV1Commerce';
+import type { ProductListV1CommerceType } from '@ring/contracts';
 
-export type CommerceSections = Array<Record<string, never> | ProductListV1CommerceResult>;
+export type CommerceSections = Array<Record<string, never> | ProductListV1CommerceType>;

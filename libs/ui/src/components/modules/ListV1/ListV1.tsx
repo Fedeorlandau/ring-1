@@ -1,12 +1,7 @@
+import type { ListV1Type } from '@ring/contracts';
 import React from 'react';
 
-export type ListV1Props = {
-  title: string;
-  link: { title: string; link: string };
-  items: Array<{ title: string; link: string }>;
-};
-
-export function ListV1({ title, link, items }: ListV1Props) {
+export function ListV1({ title, link, items }: ListV1Type) {
   return (
     <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
       <div>

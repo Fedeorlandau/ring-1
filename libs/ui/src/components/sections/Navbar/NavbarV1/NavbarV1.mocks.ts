@@ -1,10 +1,9 @@
+import type { NavbarV1sectionType, NavbarV1UIType } from '@ring/contracts';
 import { ListV1Mock } from 'src/components/modules/ListV1/ListV1.mocks';
 import { ListV2Mock } from 'src/components/modules/ListV2/ListV2.mocks';
 import { ListV3Mock } from 'src/components/modules/ListV3/ListV3.mocks';
 
-import type { NavbarV1Props, NavbarV1Section } from './NavbarV1';
-
-export const navbarV1Mock: NavbarV1Props = {
+export const NavbarV1Mock: NavbarV1UIType = {
   title: 'Ring',
   logo: {
     src: 'https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg',
@@ -14,7 +13,7 @@ export const navbarV1Mock: NavbarV1Props = {
     {
       title: 'Solutions',
       link: '',
-      items: ListV2Mock.items,
+      items: ListV2Mock,
       callsToAction: ListV3Mock,
     },
     {
@@ -24,7 +23,7 @@ export const navbarV1Mock: NavbarV1Props = {
     {
       title: 'Resources',
       link: '/',
-      items: ListV2Mock.items,
+      items: ListV2Mock,
       list: ListV1Mock,
     },
   ],
@@ -34,8 +33,8 @@ export const navbarV1Mock: NavbarV1Props = {
   secondaryButtonTitle: 'Sign in',
 };
 
-export const navbarV1SectionMock: NavbarV1Section = {
+export const NavbarV1SectionMock: NavbarV1sectionType = {
   id: 'NavbarV1',
   name: 'NavbarV1',
-  props: navbarV1Mock,
+  props: NavbarV1Mock,
 };

@@ -1,15 +1,12 @@
-import type * as OutlineIcons from '@heroicons/react/outline';
-import type * as SolidIcons from '@heroicons/react/solid';
+import type { IconNameType } from '@ring/contracts';
 import dynamic from 'next/dynamic';
 import type { ComponentType } from 'react';
 import React from 'react';
 import { cn } from 'src/utils';
 
-export type Icons = keyof typeof SolidIcons | keyof typeof OutlineIcons;
-
 export type IconProps = {
   color?: 'light' | 'dark';
-  name: Icons;
+  name: IconNameType;
   size?: 'sm' | 'md' | 'lg';
   variant?: 'outline' | 'solid';
 };
@@ -19,6 +16,7 @@ export function Icon({ color, name, variant = 'outline', size = 'md' }: IconProp
 
   switch (variant) {
     case 'outline':
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       Component = dynamic(() => import('@heroicons/react/outline').then((module) => module[name]));
       break;
 
@@ -27,6 +25,7 @@ export function Icon({ color, name, variant = 'outline', size = 'md' }: IconProp
     // break;
 
     default:
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`The icon with name "${name}" has an invalid variant.`);
   }
 

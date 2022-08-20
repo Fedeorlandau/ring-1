@@ -1,18 +1,19 @@
+import type { ProductListV1UIType } from '@ring/contracts';
 import type { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import type { ProductListV1Props } from './ProductListV1';
-import { ProductListV1 as ProductListV1UI } from './ProductListV1';
-import { productListV1Mock } from './ProductListV1.mocks';
+import { ProductListV1 } from './ProductListV1';
+import { ProductListV1Mock } from './ProductListV1.mocks';
 
 export default {
   title: 'Sections/ProductList',
-  component: ProductListV1UI,
+  component: ProductListV1,
 } as Meta;
 
-const Template: Story<ProductListV1Props> = (args) => <ProductListV1UI {...args} />;
+const Template: Story<ProductListV1UIType> = (args) => <ProductListV1 {...args} />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
-export const ProductListV1 = Template.bind({});
-ProductListV1.args = productListV1Mock;
+export const Default = Template.bind({});
+Default.storyName = 'ProductListV1';
+Default.args = ProductListV1Mock;

@@ -28,6 +28,7 @@
     "cf:import": "contentful space import --content-file contentful.config.json --skip-content --skip-roles --skip-webhooks"
   },
   "dependencies": {
+    "@ring/contracts": "*",
     "@ring/logger": "*",
     "@ring/ui": "*",
     "contentful": "10.0.0-beta-v10.8"

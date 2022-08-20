@@ -1,11 +1,11 @@
-import type { UISections } from '@ring/ui';
+import type { Sections } from '@ring/contracts';
 import { DefaultLayout } from '@ring/ui';
 import React from 'react';
 
 export type PageProps = {
-  footer?: UISections;
-  header?: UISections;
-  main: UISections;
+  footer?: Sections;
+  header?: Sections;
+  main: Sections;
 };
 
 export function CatchAllPage({ footer, header, main }: PageProps) {

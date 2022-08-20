@@ -32,6 +32,7 @@
   "dependencies": {
     "@headlessui/react": "1.6.6",
     "@heroicons/react": "1.0.6",
+    "@ring/contracts": "*",
     "@ring/logger": "*",
     "@ring/ui-tokens": "*",
     "@types/react": "18.0.17",

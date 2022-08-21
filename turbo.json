@@ -25,7 +25,7 @@
       "dependsOn": ["^build-lib"],
       "outputs": ["dist/**"]
     },
-    "ui-tokens#build": {
+    "ui-tokens#build-lib": {
       "cache": false,
       "dependsOn": ["^build-lib"],
       "outputs": ["dist/**"]

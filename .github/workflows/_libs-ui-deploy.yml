@@ -1,12 +1,12 @@
 name: _Libs - UI
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - libs/ui/**
-      - libs/ui-tokens/**
+  release:
+    types: [published]
+
+    tags:
+      - '@ring/ui-v*'
+      - '@ring/ui-tokens-v*'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

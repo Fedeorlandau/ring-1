@@ -1,14 +1,5 @@
 name: _Apps - Storefront
 
-env:
-  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-  CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
-  SWELL_STORE_ID: ${{ secrets.SWELL_STORE_ID }}
-  SWELL_SECRET_KEY: ${{ secrets.SWELL_SECRET_KEY }}
-  VERCEL_ORG_ID: ${{ secrets.RING_STOREFRONT_VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.RING_STOREFRONT_VERCEL_PROJECT_ID }}
-
 on:
   release:
     types: [published]
@@ -21,6 +12,15 @@ on:
       - '@ring/swell-v*'
       - '@ring/ui-v*'
       - '@ring/ui-tokens-v*'
+
+env:
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+  CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
+  SWELL_STORE_ID: ${{ secrets.SWELL_STORE_ID }}
+  SWELL_SECRET_KEY: ${{ secrets.SWELL_SECRET_KEY }}
+  VERCEL_ORG_ID: ${{ secrets.RING_STOREFRONT_VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.RING_STOREFRONT_VERCEL_PROJECT_ID }}
 
 jobs:
   build-lint-test:

@@ -1,18 +1,26 @@
 name: _Apps - Storefront
+
 env:
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+  CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
+  SWELL_STORE_ID: ${{ secrets.SWELL_STORE_ID }}
+  SWELL_SECRET_KEY: ${{ secrets.SWELL_SECRET_KEY }}
   VERCEL_ORG_ID: ${{ secrets.RING_STOREFRONT_VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.RING_STOREFRONT_VERCEL_PROJECT_ID }}
+
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - apps/storefront/**
-      - libs/cms/contentful/**
-      - libs/commerce/swell/**
-      - libs/logger/**
-      - libs/ui/**
-      - libs/ui-tokens/**
+  release:
+    types: [published]
+
+    tags:
+      - '@ring/storefront-v*'
+      - '@ring/contentful-v*'
+      - '@ring/contracts-v*'
+      - '@ring/logger-v*'
+      - '@ring/swell-v*'
+      - '@ring/ui-v*'
+      - '@ring/ui-tokens-v*'
 
 jobs:
   build-lint-test:

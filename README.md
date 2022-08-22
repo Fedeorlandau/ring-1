@@ -68,8 +68,8 @@ Continuous integration and continuous delivery with GitHub actions:
 - [x] Run the checks to block the merge of pull requests.
 - [x] Generate releases based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) with [Semantic Release](https://github.com/semantic-release/semantic-release).
 - [x] Check Pull Requests test coverage, and block them if they are below the defined threshold.
-- [x] Check Pull Requests title, as the their are used to generate the releases.
-- [x] Dependabot to generate pull requests which update the dependencies, including auto approach and auto merge jobs for a full automatic setup.
+- [x] Check Pull Requests title, as the titles are used to generate the releases.
+- [x] Dependabot to generate pull requests which update the dependencies, including auto approval and auto merge jobs for a full automatic setup.
 - [x] Auto attach a size label to each Pull Request, to encourage small Pull Requests.
 
 ## Docs

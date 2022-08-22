@@ -21,7 +21,6 @@ The accelerator to speed-up your web development. Ring is an opinionated framewo
   - [x] [Figma Tokens](https://www.figma.com/community/plugin/843461159747178978/Figma-Tokens) to syncronize Figma with the front-end code.
   - [x] Components documented with [Storybook](https://storybook.js.org/).
   - [x] Design system following [atomic design](https://bradfrost.com/blog/post/atomic-web-design/).
-  - [x] High scalability, architecture designed to support any number of independent sections.
   - [x] Best testing practices with [Testing Library](https://testing-library.com/) and [MSW](https://mswjs.io/) to achieve 100% test coverage.
   - [ ] [WCAG Level AA](https://www.w3.org/WAI/WCAG2AA-Conformance) compliant.
   - [x] Designs for mobile, tablet and desktop.

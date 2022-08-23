@@ -1,12 +1,10 @@
-name: _Libs - UI
+name: _Libs - UI - Deploy Preview
 
 on:
-  release:
-    types: [published]
-
-    tags:
-      - '@ring/ui-v*'
-      - '@ring/ui-tokens-v*'
+  pull_request:
+    paths:
+      - libs/ui/**
+      - libs/ui-tokens/**
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

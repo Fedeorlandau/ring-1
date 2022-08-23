@@ -1,4 +1,4 @@
-name: _Apps - Storefront
+name: _Apps - Storefront - Deploy Production
 
 on:
   release:

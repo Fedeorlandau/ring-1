@@ -60,19 +60,14 @@ export function BlogPostListV1({ list, description, title }: BlogPostListV1UITyp
                 <div className="flex items-center space-x-4">
                   {blogPost.author && (
                     <>
-                      <Image
-                        alt="Jese Leos avatar"
-                        className="h-7 w-7 rounded-full"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                      />
-                      <span
-                        className={cn('font-medium', {
-                          'text-gray-500': theme === 'light',
-                          'text-white': theme === 'dark',
-                        })}
-                      >
-                        {blogPost.author}
-                      </span>
+                      <div className="relative h-7 w-7">
+                        <Image
+                          alt="Jese Leos avatar"
+                          className="rounded-full"
+                          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+                        />
+                      </div>
+                      <Text variant="xs">{blogPost.author}</Text>
                     </>
                   )}
                 </div>

@@ -1,5 +1,14 @@
-import 'src/styles/global.css';
+import '!style-loader!css-loader!postcss-loader!../src/styles/global.css';
 
+// next/image
+import * as NextImage from 'next/image';
+const OriginalNextImage = NextImage.default;
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  value: (props) => <OriginalNextImage {...props} unoptimized />,
+});
+
+// parameters
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -19,4 +28,5 @@ export const parameters = {
   },
 };
 
+// decorators
 export const decorators = [(Story) => <Story />];

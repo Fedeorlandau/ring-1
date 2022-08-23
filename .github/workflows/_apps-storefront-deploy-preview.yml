@@ -1,4 +1,4 @@
-name: _Apps - Storefront
+name: _Apps - Storefront - Deploy Preview
 env:
   VERCEL_ORG_ID: ${{ secrets.RING_STOREFRONT_VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.RING_STOREFRONT_VERCEL_PROJECT_ID }}

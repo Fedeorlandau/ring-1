@@ -35,7 +35,7 @@
     "@ring/config-jest": "*",
     "@ring/config-release": "*",
     "@ring/config-typescript": "*",
-    "@swc/core": "1.2.241",
+    "@swc/core": "1.2.242",
     "@swc/jest": "0.2.22",
     "@types/jest": "28.1.7",
     "@types/node": "18.7.10",

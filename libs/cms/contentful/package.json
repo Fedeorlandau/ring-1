@@ -38,7 +38,7 @@
     "@ring/config-jest": "*",
     "@ring/config-release": "*",
     "@ring/config-typescript": "*",
-    "@swc/core": "1.2.241",
+    "@swc/core": "1.2.242",
     "@swc/jest": "0.2.22",
     "cf-content-types-generator": "2.2.2",
     "contentful-cli": "1.14.29",

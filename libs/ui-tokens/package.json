@@ -36,7 +36,7 @@
     "@types/lodash.get": "4.4.7",
     "eslint": "8.22.0",
     "lodash.get": "4.4.2",
-    "tsup": "6.2.2",
+    "tsup": "6.2.3",
     "typescript": "4.8.2",
     "zod": "3.18.0"
   }
